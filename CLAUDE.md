@@ -28,6 +28,9 @@ redesign phase. Until then the site name stays "Channel Dynamics". New copy avoi
 the rename is a Site-settings change plus a find/replace. Positioning: AI, service design and innovation, research
 and future concept design. Predictable Selling Systems and Traffic pages were removed. Voice is "we".
 Recent-work case studies (2020–26) come from Robert's CV; they state what the client reported and invent no metrics.
+Robert resells **RedOS by redfirst.ai** (page under the AI pillar); keep its description consistent with redfirst.ai.
+Videos: leadership and About pages accept a `videos` list (YouTube ID or an .mp4 in site/downloads/); press items live in
+`leadership.press`. The Jazz FM / Mishcon interview (May 2025) is audio only, hosted at hellorayo.co.uk; link, don't copy.
 
 ## Standard workflow for any change
 1. Edit the content JSON in the CMS (or via the Site Manager UI → Backup JSON → `apply-content.js`)
