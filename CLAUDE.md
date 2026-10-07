@@ -1,7 +1,7 @@
-# Channel Dynamics — project brief for Claude Code
+# Eldingo (formerly Channel Dynamics) — project brief for Claude Code
 
-Marketing website for **Channel Dynamics Ltd**, a UX, service design and conversion consultancy led by
-Robert Elding (company no. 11077677). The site showcases past client work (case studies), services,
+Marketing website for **Eldingo**, the trading name of Channel Dynamics Ltd (company no. 11077677), an AI, service
+design and research consultancy led by Robert Elding. The site showcases past client work (case studies), services,
 UX training, a blog archive and free resources. It replaces the old WordPress site that lived on WP Engine
 (chndynamics.wpenginepowered.com); copy and images were migrated from there in October 2026.
 
@@ -12,7 +12,10 @@ UX training, a blog archive and free resources. It replaces the old WordPress si
   and its `window.CD.buildPages()` renderer is shared with the build script
 - `tools/` — `node tools/build-site.js` (build all pages), `node tools/apply-content.js <backup.json>` (publish a
   CMS backup into the defaults). See tools/README.md.
-- `brand/` — logo. Palette: Red #E4130E, Dark red #AB0116, Ink #14181D, Slate #525B68, Mist #F4F5F7. Font: Manrope.
+- `brand/` — Eldingo! logo system (navy wordmark in Helvetica Neue Bold outlines, hanging-bulb exclamation mark).
+  Palette: Brand navy #1B2A4A, Spark yellow #FFC83D, Ink #1F2733, Mist #F4F5F7; Red #E4130E only for `theme: red`
+  pages (Switch On / Red Team). Site font: Inter. Logo geometry in `brand/eldingo-logo.json`; the renderer builds the
+  header/footer logo inline from `site.logoPath` (see `logoSvg()` in the CMS).
 - `docs/GO-LIVE.md` — hosting/launch runbook.
 
 ## Site map
@@ -23,9 +26,9 @@ clients, boards and NED searches) · `/resources/` · `/blog/` + `/blog/<slug>/`
 Old WordPress paths and the pre-October-2026 service paths 301 in `site/_redirects`.
 
 ## Brand direction (decided Oct 2026)
-The site will be rebranded **Eldingo** (domain eldingo.co.uk; Channel Dynamics Ltd stays the legal entity) in the
-redesign phase. Until then the site name stays "Channel Dynamics". New copy avoids the brand name where possible so
-the rename is a Site-settings change plus a find/replace. Positioning: AI, service design and innovation, research
+The site IS now branded **Eldingo** (since Oct 2026) while still served from channeldynamics.io; Channel Dynamics Ltd
+stays the legal entity. Verbatim testimonials still say "Channel Dynamics" and must not be edited. Domain move to
+eldingo.co.uk is Phase 3 (update Site settings → Live site URL, 301s, Search Console). Positioning: AI, service design and innovation, research
 and future concept design. Predictable Selling Systems and Traffic pages were removed. Voice is "we".
 Recent-work case studies (2020–26) come from Robert's CV; they state what the client reported and invent no metrics.
 Robert resells **RedOS by redfirst.ai** (page under the AI pillar); keep its description consistent with redfirst.ai.
@@ -44,7 +47,7 @@ Videos: leadership and About pages accept a `videos` list (YouTube ID or an .mp4
 
 ## Non-negotiables
 - Never commit secrets or `.env`.
-- Company name is "Channel Dynamics" (legal: Channel Dynamics Ltd).
+- Brand is "Eldingo" (legal: Channel Dynamics Ltd). Testimonials and quotes stay verbatim even where they say Channel Dynamics.
 - Testimonials, client names and case-study results are real and must stay verbatim. No invented claims.
 - Images go in `site/images/`, named `channel-dynamics-*.jpg|png|webp`, web-optimised (< ~300 KB).
 - The contact form has no backend: it opens a pre-filled email. Don't add form handlers that need secrets in the repo.

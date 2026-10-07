@@ -1,4 +1,4 @@
-# Channel Dynamics — https://channeldynamics.io
+# Eldingo — https://channeldynamics.io
 User-agent: *
 Allow: /
 
