@@ -1,0 +1,26 @@
+# Old WordPress URLs -> new site (301)
+/case-studies/*            /work/:splat               301
+/case-studies              /work/                     301
+/blog/portfolio/*          /work/                     301
+/about-us/resources/       /resources/                301
+/about-us/resources        /resources/                301
+/about-us/careers/         /about/                    301
+/about-us/*                /about/                    301
+/about-us                  /about/                    301
+/ux-conversion-training-courses-london/*  /training/  301
+/ux-conversion-training-courses-london    /training/  301
+/ux-training-courses-workshops-london/    /training/  301
+/lp-training/              /training/                 301
+/predictable-selling-systems/   /services/predictable-selling-systems/  301
+/predictable-selling-systems    /services/predictable-selling-systems/  301
+/for-marketing-directors/  /services/predictable-selling-systems/  301
+/for-founders-ceos/        /services/predictable-selling-systems/  301
+/strategy-call/            /contact/                  301
+/growth-strategy-call-lp1/ /contact/                  301
+/terms-and-conditions/     /terms/                    301
+/terms-and-conditions      /terms/                    301
+/blog-2/                   /blog/                     301
+/services/insight-old/     /services/insight/         301
+/services_old/             /services/                 301
+/*-old/                    /services/                 301
+/wp-content/uploads/*      /images/                   301

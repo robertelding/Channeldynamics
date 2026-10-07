@@ -1,0 +1,5 @@
+# Channel Dynamics — https://channeldynamics.io
+User-agent: *
+Allow: /
+
+Sitemap: https://channeldynamics.io/sitemap.xml

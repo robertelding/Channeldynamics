@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "channeldynamics-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8787", "--directory", "/Users/robertelding/Documents/GitHub/channeldynamics/site"],
+      "port": 8787
+    }
+  ]
+}

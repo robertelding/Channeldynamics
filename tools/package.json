@@ -1,0 +1,6 @@
+{ "name": "channel-dynamics-site-tools", "private": true,
+  "scripts": {
+    "build": "node build-site.js",
+    "serve": "python3 -m http.server 8080 --directory ../site"
+  },
+  "dependencies": { "jsdom": "^24.0.0" } }

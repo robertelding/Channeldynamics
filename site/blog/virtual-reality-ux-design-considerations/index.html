@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Virtual Reality UX Design Considerations | Channel Dynamics</title>
+<meta name="description" content="If we take a look back on last year tech news, it looks like everyone was talking about virtual reality (VR). Some of the tech companies that were just…">
+<link rel="canonical" href="https://channeldynamics.io/blog/virtual-reality-ux-design-considerations/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Virtual Reality UX Design Considerations | Channel Dynamics">
+<meta property="og:description" content="If we take a look back on last year tech news, it looks like everyone was talking about virtual reality (VR). Some of the tech companies that were just…">
+<meta property="og:url" content="https://channeldynamics.io/blog/virtual-reality-ux-design-considerations/">
+<meta property="og:site_name" content="Channel Dynamics">
+<meta property="og:image" content="https://channeldynamics.io/images/channel-dynamics-blog-33.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Virtual Reality UX Design Considerations","datePublished":"2018-05-17","dateModified":"2018-05-17","author":{"@type":"Person","name":"Robert Elding"},"publisher":{"@type":"Organization","name":"Channel Dynamics","logo":{"@type":"ImageObject","url":"https://channeldynamics.io/images/channel-dynamics-logo-sml-red.png"}},"image":"https://channeldynamics.io/images/channel-dynamics-blog-33.jpg","mainEntityOfPage":"https://channeldynamics.io/blog/virtual-reality-ux-design-considerations/","description":"If we take a look back on last year tech news, it looks like everyone was talking about virtual reality (VR). Some of the tech companies that were just…"}</script>
+<style>
+:root{--red:#E4130E;--red-dark:#AB0116;--ink:#14181D;--slate:#525B68;--paper:#FFFFFF;--mist:#F4F5F7;--line:#E3E6EA;--max:1180px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Manrope',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;font-size:17px}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--red-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.15;font-weight:800;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,4.6vw,3.4rem)}
+h2{font-size:clamp(1.6rem,3vw,2.3rem)}
+h3{font-size:1.25rem}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.narrow{max-width:820px}
+section{padding:72px 0}
+@media(max-width:700px){section{padding:52px 0}}
+.eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.lead{font-size:1.2rem;color:var(--slate);max-width:720px}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-weight:700;padding:14px 24px;border-radius:999px;text-decoration:none;transition:.2s;border:2px solid var(--red);font-size:15px}
+.btn:hover{background:var(--red-dark);border-color:var(--red-dark);text-decoration:none;transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--ink);background:transparent}
+.btn.light{background:#fff;color:var(--ink);border-color:#fff}
+.btn.light:hover{background:var(--mist);border-color:var(--mist)}
+.btn.outline-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn.outline-light:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.arrow-link{font-weight:700;color:var(--red-dark)}
+.arrow-link::after{content:' →'}
+/* header */
+.site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:19px;color:var(--ink);letter-spacing:-.01em}
+.logo img{width:40px;height:40px}
+.nav{display:flex;align-items:center;gap:4px;list-style:none}
+.nav>li{position:relative}
+.nav a{display:block;padding:10px 13px;color:var(--ink);font-weight:600;font-size:15px;border-radius:8px}
+.nav a:hover{background:var(--mist);text-decoration:none}
+.nav a.active{color:var(--red)}
+.nav .sub{display:none;position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px;min-width:240px;box-shadow:0 18px 40px rgba(20,24,29,.12);list-style:none}
+.nav li:hover>.sub,.nav li:focus-within>.sub{display:block}
+.nav .sub a{font-weight:500;font-size:14px;padding:9px 12px}
+.nav .cta a{background:var(--ink);color:#fff;border-radius:999px;padding:11px 20px;margin-left:8px}
+.nav .cta a:hover{background:var(--red)}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:8px;width:44px;height:44px;cursor:pointer;align-items:center;justify-content:center}
+.burger span{display:block;width:20px;height:2px;background:var(--ink);position:relative}
+.burger span::before,.burger span::after{content:'';position:absolute;left:0;width:20px;height:2px;background:var(--ink)}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+@media(max-width:960px){
+  .burger{display:flex}
+  .nav{display:none;position:absolute;top:74px;left:0;right:0;background:#fff;flex-direction:column;align-items:stretch;padding:12px 20px 20px;border-bottom:1px solid var(--line);box-shadow:0 20px 40px rgba(0,0,0,.12)}
+  .nav.open{display:flex}
+  .nav .sub{display:block;position:static;border:none;box-shadow:none;padding:0 0 4px 14px;min-width:0}
+  .nav .cta a{margin:8px 0 0;text-align:center}
+}
+/* hero */
+.hero{position:relative;background:var(--ink);color:#fff;overflow:hidden;padding:96px 0 88px}
+.hero::before{content:'';position:absolute;inset:0;background:var(--hero-img) center/cover no-repeat;opacity:.28}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,24,29,.95) 20%,rgba(20,24,29,.55) 70%,rgba(228,19,14,.35))}
+.hero .wrap{position:relative;z-index:1}
+.hero h1{max-width:820px;margin-bottom:18px}
+.hero .lead{color:rgba(255,255,255,.82);margin-bottom:34px}
+.hero .eyebrow{color:#ff6d69}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero.compact{padding:70px 0 60px}
+.hero.plain{background:var(--mist);color:var(--ink)}
+.hero.plain::before,.hero.plain::after{display:none}
+.hero.plain .lead{color:var(--slate)}
+.hero.plain .eyebrow{color:var(--red)}
+.hero .kicker{font-size:1.05rem;color:rgba(255,255,255,.7);margin-bottom:10px;font-weight:600}
+/* stats */
+.stats{background:var(--red);color:#fff;padding:34px 0}
+.stats .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}
+.stat b{display:block;font-size:2.4rem;font-weight:800;line-height:1}
+.stat span{font-size:14px;opacity:.9;display:block;margin-top:6px}
+/* grids */
+.section-head{max-width:760px;margin-bottom:40px}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.section-head p{color:var(--slate);margin-top:12px;font-size:1.05rem}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+@media(max-width:900px){.grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid-3,.grid-2,.grid-4{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(20,24,29,.1)}
+.card img{aspect-ratio:16/9;object-fit:cover;width:100%}
+.card .body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:1.15rem}
+.card p{color:var(--slate);font-size:15px;flex:1}
+.card .tag{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.card a.cover{position:absolute;inset:0}
+.card{position:relative}
+.bg-mist{background:var(--mist)}
+.bg-ink{background:var(--ink);color:#fff}
+.bg-ink .lead,.bg-ink p{color:rgba(255,255,255,.8)}
+.bg-ink h2{color:#fff}
+/* logos */
+.logo-wall{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;align-items:center}
+.logo-wall div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;place-items:center;height:92px}
+.logo-wall img{max-height:48px;width:auto;max-width:100%;filter:grayscale(1);opacity:.75;transition:.2s}
+.logo-wall div:hover img{filter:none;opacity:1}
+@media(max-width:900px){.logo-wall{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:500px){.logo-wall{grid-template-columns:repeat(2,1fr)}}
+.logo-row{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
+.logo-row div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 22px;display:grid;place-items:center;height:84px;min-width:150px}
+.logo-row img{max-height:44px;width:auto}
+/* testimonials */
+.quote-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px;display:flex;flex-direction:column;gap:18px}
+.quote-card blockquote{font-size:1.05rem;line-height:1.6;color:var(--ink)}
+.quote-card blockquote::before{content:'“';color:var(--red);font-size:2.6rem;line-height:0;vertical-align:-14px;margin-right:4px;font-weight:800}
+.quote-card .who{display:flex;align-items:center;gap:14px}
+.quote-card .who img{width:52px;height:52px;border-radius:50%;object-fit:cover}
+.quote-card .who b{display:block}
+.quote-card .who span{font-size:14px;color:var(--slate)}
+.pull-quote{background:var(--ink);color:#fff;border-radius:20px;padding:44px 48px;margin:40px 0}
+.pull-quote blockquote{font-size:1.35rem;font-weight:600;line-height:1.5}
+.pull-quote cite{display:block;margin-top:18px;font-style:normal;color:#ff6d69;font-weight:700;font-size:15px}
+@media(max-width:600px){.pull-quote{padding:30px 24px}.pull-quote blockquote{font-size:1.12rem}}
+/* work cards */
+.work-card{position:relative;border-radius:16px;overflow:hidden;background:var(--ink);color:#fff;aspect-ratio:4/3;display:flex;align-items:flex-end}
+.work-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75;transition:.4s}
+.work-card:hover img{transform:scale(1.04);opacity:.6}
+.work-card .body{position:relative;padding:26px;background:linear-gradient(transparent,rgba(20,24,29,.9));width:100%}
+.work-card .stat{font-size:2rem;font-weight:800;line-height:1;color:#ff6d69}
+.work-card h3{color:#fff;font-size:1.15rem;margin-top:8px}
+.work-card p{color:rgba(255,255,255,.8);font-size:14px;margin-top:4px}
+/* split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.split.rev>div:first-child{order:2}
+@media(max-width:860px){.split{grid-template-columns:1fr;gap:28px}.split.rev>div:first-child{order:0}}
+.split img{border-radius:16px}
+.check-list{list-style:none;display:grid;gap:12px;margin-top:18px}
+.check-list li{padding-left:34px;position:relative;line-height:1.5}
+.check-list li::before{content:'';position:absolute;left:0;top:3px;width:22px;height:22px;border-radius:50%;background:var(--red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/14px no-repeat}
+.check-list.cols{grid-template-columns:1fr 1fr}
+@media(max-width:700px){.check-list.cols{grid-template-columns:1fr}}
+/* article / prose */
+.prose{max-width:760px}
+.prose h2{font-size:1.6rem;margin:40px 0 14px}
+.prose h3{font-size:1.25rem;margin:30px 0 10px}
+.prose p{margin-bottom:18px}
+.prose ul,.prose ol{margin:0 0 20px 24px}
+.prose li{margin-bottom:8px}
+.prose figure{margin:28px 0}
+.prose figure img{border-radius:12px;border:1px solid var(--line)}
+.prose blockquote{border-left:4px solid var(--red);padding:6px 0 6px 20px;color:var(--slate);font-size:1.1rem;margin:24px 0}
+.prose img{border-radius:12px}
+/* case study layout */
+.cs-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:start}
+@media(max-width:900px){.cs-layout{grid-template-columns:1fr}}
+.cs-aside{position:sticky;top:96px;background:var(--mist);border-radius:16px;padding:26px}
+.cs-aside h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.cs-aside dl{display:grid;gap:14px}
+.cs-aside dt{font-size:12px;font-weight:800;color:var(--slate);text-transform:uppercase;letter-spacing:.08em}
+.cs-aside dd{font-weight:600}
+.cs-aside img{max-height:56px;width:auto;margin-bottom:18px}
+.cs-section{margin-bottom:44px}
+.cs-section h2{font-size:1.5rem;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.cs-section h2 .n{width:34px;height:34px;border-radius:50%;background:var(--red);color:#fff;display:inline-grid;place-items:center;font-size:14px;flex-shrink:0}
+.cs-section p{margin-bottom:14px}
+.cs-imgs{display:grid;gap:18px;margin:22px 0}
+.cs-imgs img{border-radius:14px;border:1px solid var(--line);width:100%}
+.cs-imgs.two{grid-template-columns:1fr 1fr}
+@media(max-width:600px){.cs-imgs.two{grid-template-columns:1fr}}
+/* services */
+.pillar{display:grid;grid-template-columns:72px 1fr;gap:22px;align-items:start;padding:30px;background:#fff;border:1px solid var(--line);border-radius:16px}
+.pillar img{width:72px;height:72px;object-fit:contain}
+.pillar h3{font-size:1.4rem;margin-bottom:8px}
+.pillar p{color:var(--slate);margin-bottom:14px}
+.pillar ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.pillar ul a{display:inline-block;background:var(--mist);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600;color:var(--ink)}
+.pillar ul a:hover{background:var(--red);color:#fff;text-decoration:none}
+.svc-sections{display:grid;gap:60px}
+.svc-section .split img{border:1px solid var(--line)}
+.svc-imgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:20px}
+.svc-imgs img{border-radius:12px;border:1px solid var(--line);background:#fff}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;counter-reset:step}
+@media(max-width:900px){.steps{grid-template-columns:1fr}}
+.step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;position:relative}
+.step img{height:110px;width:auto;object-fit:contain;margin-bottom:18px}
+.step .num{font-size:12px;font-weight:800;letter-spacing:.16em;color:var(--red);text-transform:uppercase;margin-bottom:8px}
+.step h3{margin-bottom:8px}
+.step p{color:var(--slate);font-size:15px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+@media(max-width:700px){.compare{grid-template-columns:1fr}}
+.compare div{border-radius:16px;padding:28px}
+.compare .old{background:var(--mist)}
+.compare .new{background:var(--ink);color:#fff}
+.compare h3{margin-bottom:14px}
+.compare ul{list-style:none;display:grid;gap:10px}
+.compare .old li::before{content:'✕  ';color:#b0b7c1;font-weight:800}
+.compare .new li::before{content:'✓  ';color:#ff6d69;font-weight:800}
+/* faq */
+details{border:1px solid var(--line);border-radius:12px;padding:0 20px;background:#fff;margin-bottom:10px}
+details summary{cursor:pointer;font-weight:700;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:'+';color:var(--red);font-weight:800;font-size:1.3rem;line-height:1}
+details[open] summary::after{content:'–'}
+details p{padding:0 0 18px;color:var(--slate)}
+/* cta band */
+.cta-band{background:var(--ink);color:#fff;padding:70px 0}
+.cta-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.cta-band h2{color:#fff;max-width:620px}
+.cta-band p{color:rgba(255,255,255,.75);margin-top:10px;max-width:620px}
+/* blog */
+.post-meta{font-size:14px;color:var(--slate);display:flex;gap:10px;flex-wrap:wrap}
+.post-hero{border-radius:16px;margin:30px 0;max-height:420px;object-fit:cover;width:100%}
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+.contact-grid dl{display:grid;gap:18px}
+.contact-grid dt{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.contact-grid dd{font-size:1.05rem}
+.form{display:grid;gap:14px;background:var(--mist);padding:28px;border-radius:16px}
+.form label{font-size:13px;font-weight:700}
+.form input,.form textarea,.form select{width:100%;border:1px solid var(--line);border-radius:8px;padding:12px;font-family:inherit;font-size:15px;background:#fff;margin-top:6px}
+.form textarea{min-height:130px}
+/* footer */
+.site-footer{background:var(--ink);color:rgba(255,255,255,.75);padding:64px 0 30px;font-size:14px}
+.site-footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
+@media(max-width:900px){.site-footer .cols{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.site-footer .cols{grid-template-columns:1fr}}
+.site-footer h4{color:#fff;font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px}
+.site-footer ul{list-style:none;display:grid;gap:8px}
+.site-footer a{color:rgba(255,255,255,.75)}
+.site-footer a:hover{color:#fff}
+.site-footer .logo{color:#fff;margin-bottom:14px}
+.site-footer .badges{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.site-footer .badges img{height:36px;width:auto;background:#fff;border-radius:6px;padding:5px}
+.site-footer .legal{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.55)}
+.breadcrumb{font-size:13px;color:var(--slate);margin-bottom:18px}
+.breadcrumb a{color:var(--slate)}
+.resource{display:grid;grid-template-columns:140px 1fr;gap:22px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px}
+.resource img{max-height:150px;width:auto;margin:0 auto}
+@media(max-width:600px){.resource{grid-template-columns:1fr}}
+.course{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px}
+.course img{height:120px;width:auto;object-fit:contain;align-self:flex-start}
+.course .price{font-weight:800;color:var(--red)}
+.course p{color:var(--slate);font-size:15px;flex:1}
+</style>
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="logo" href="/"><img src="/images/channel-dynamics-logo-sml-red.png" alt="Channel Dynamics logo" width="40" height="40">Channel Dynamics</a>
+  <button class="burger" aria-label="Menu" aria-expanded="false" onclick="var n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))"><span></span></button>
+  <ul class="nav" id="nav"><li><a href="/work/">Work</a></li><li><a href="/services/">Services</a><ul class="sub"><li><a href="/services/discover/">Discover</a></li><li><a href="/services/insight/">Insight</a></li><li><a href="/services/optimise/">Optimise</a></li><li><a href="/services/predictable-selling-systems/">Predictable Selling Systems</a></li><li><a href="/services/service-design/">Service design</a></li><li><a href="/services/analytics-reporting/">Analytics &amp; reporting</a></li><li><a href="/services/traffic/">Traffic</a></li></ul></li><li><a href="/training/">Training</a></li><li><a href="/about/">About</a></li><li><a href="/blog/" class="active">Blog</a></li><li><a href="/resources/">Resources</a></li><li><a href="/contact/">Contact</a></li><li class="cta"><a href="/contact/">Book a strategy call</a></li></ul>
+</div></header>
+<main>
+<section style="padding-bottom:30px"><div class="wrap narrow"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span>Virtual Reality UX Design Considerations</span></nav><div class="eyebrow">Insight</div><h1>Virtual Reality UX Design Considerations</h1><div class="post-meta" style="margin-top:14px"><span>17 May 2018</span><span>·</span><span>By Robert Elding</span></div><img class="post-hero" src="/images/channel-dynamics-blog-33.jpg" alt=""></div></section>
+<section style="padding-top:0"><div class="wrap narrow"><article class="prose"><p>If we take a look back on last year tech news, it looks like everyone was talking about virtual reality (VR). Some of the tech companies that were just exploring the technology have now started to push aggressively into VR. Other companies quickly followed so we had a chance to watch an NBA game in VR for the first time. CNN did the same by streaming a presidential debate in VR.</p>
+<p>If we take another look into the past 20 years, we will still be able to see VR in the news. So, what´s changed? Is this just a trend that will start to fade away or has the time of VR finally arrived?</p>
+<p>It´s safe to say yes. But we also need to say why. With more and more people starting to dive into virtual reality, and VR devices becoming more and more affordable, it´s safe to say that, this time, VR is here to stay. And the change it will cause will change our lives from the ground up. On the pinnacle of that change will be UX professionals who, as the creators of user experiences, will have to develop new design strategies that will be able to adapt to VR, and stay (at least) one step ahead of this technological revolution.</p>
+<p>The opportunity for UX professionals and enthusiasts is massive. We will have to conceptualize completely new ways of interaction for shopping, education, collaboration, content presentation, entertainment and more. The whole concept of VR is still relatively new and no rules have yet been carved into stone. In a world without any limitations, the only limitation for us is our imagination and we can let it run wild. It is a new world for you to explore and in order to help you out a bit, we have decided to devote this article to some considerations for UX in virtual reality. But before we go deeper into it, let us try to go back and explain what VR actually is.</p>
+<p>What is VR?</p>
+<p>Explaining virtual reality can be a bit tricky and explanations can vary considerably depending on how old is the person you are asking. For instance, someone younger would say that VR is a technology that allows you to experience images in a 3D simulated environment. For the purpose of this article, however, we will have to broaden that definition a little bit. Virtual reality is a new communication medium that combines audio and video to allow the user to enter a computer generated 3D environment which is so immersive that the word “virtual” is present only in its name. The goal of virtual reality is to give us the ability to experience things and sensations that we could never do on our own: things such as seeing ourselves from the outside or visiting places that we could never visit otherwise.</p>
+<p>A couple of years have passed since Facebook acquired Oculus Rift, and the number of VR campaigns and 3D movies is on the constant rise. While VR is still inaccessible for most people, for one reason or another, this has now started to change and as the price of VR headsets continues to plummet, it is obvious that virtual reality is quickly becoming the new reality.</p>
+<p>According to a survey in which Perkins Coie and Upload surveyed more than 650 startup founders, executives with established technology companies and investors on the future of AR and VR, there is a great promise for a continued growth of the industry but there are some obstacles, as well. Surprisingly, the majority of them did not list the price as their main obstacle. Instead, the survey shows that the main obstacles are lack of compelling content and issues with user experience as the main obstacles for augmented reality (AR) and VR in the following years.</p>
+<figure><img src="/images/channel-dynamics-blog-image-vr.png" alt="" loading="lazy"></figure>
+<p>Getting down to numbers, 38% of respondents says that user experience is the biggest obstacle for VR adoption while only 32% mentioned cost as their number one obstacle. Additionally, 37% of respondents claim that inadequate content is the biggest challenge. 23% listed reluctance and 20% technical limitations as their number one obstacle.</p>
+<figure><img src="/images/channel-dynamics-blog-image-v-2.png" alt="" loading="lazy"></figure>
+<p>At the end of the survey, the respondents were asked about their thoughts on the future of VR. The majority of respondents agreed that in the next 2 years, VR and smartphone companies will focus their efforts into developing mobile VR solutions.</p>
+<p>With this increase of popularity of VR, there is a growing need for designers to incorporate VR´s requirements and capabilities in order to create immersive and believable VR environment. Keep reading to find out more about some of the considerations and challenges that UX designers face when crafting VR experiences.</p>
+<p>Immersion</p>
+<p>In the context of virtual reality, the word “immersion” is used to describe the user´s emotional reaction to the virtual world in terms of feeling as if they are actually a part of the virtual world. This means that, since immersion is inherent to the core of VR, the whole environment must be “alive” and sound must play an important role in the whole experience.</p>
+<p>For the purpose of enhancing the immersive aspect of VR, audio and sound must be convincing and go hand in hand with the visuals. Otherwise, it will be impossible to trick the brainto buy into the illusion. On the other hand, motion should be used only to enhance the interaction or draw focus to it, but it should never be overused. If there are many elements moving around at the same time, the user can easily get confused or distracted and if the situation continues for some time, the confusion can get replaced by annoyance. Most of you will agree with us saying that the user mustn´t get annoyed by the interface but instead fall in love with it as he continues to use it.</p>
+<p>Same as many of us have been able to experience in 2D games, there are various HUD displays that provide information to the player. If these heads up displays are directly ported from 2D to virtual 3D environment, they can cause confusion and strain. When such displays have to be put in VR environment, it is best to put them at a certain distance so they are not too close to the user. For instance, if they are positioned at a certain distance and the character walks through the space in between, the user should see the character appearing in front and obstructing his view of the HUD. By following this best practice, the immersion is not broken and it helps avoid eye strain and confusion.</p>
+<p>Comfort</p>
+<p>One of the most important things to keep in mind when designing for VR is comfort – keep the user in a state of satisfaction without any feeling of anxiety of pain. This means that interface must be designed in an easy to read way. Generally, text and virtual reality don´t go well together, especially since smaller text can be very hard to read.</p>
+<p>As users are constantly overloaded with visual information, VR means that less is more and GUI should be reduced as much as possible to ensure the minimalism and purity of the design. Another reason why this is important is eye strain which can be a real issue for users wearing VR headsets. To minimize the issue, UX designers need to avoid things such as bright scenes or high density graphics.</p>
+<p>One additional thing that UX designers can do is to use rest frames. One such example is when a person sits on the back seat of a car and is looking out the front window. The person is still able to see other parts of the car while looking out the front window. In this case, the car interior is the rest frame – a part of the scene that the user sees as stationary. One similar example of a rest frame would be the cockpit of the plane in a flight simulator game.</p>
+<p>Experience</p>
+<p>When talking about VR, it is becoming obvious that users are selecting experiences over products. This means that the success of VR will be based upon exceptional user experiences, rather than exceptional technology. Here we come to yet another common issue in VR – motion sickness. This is a VR challenge that has been present for decades and a number one reason why users have adverse experiences in VR.</p>
+<p>Caused by the difference between what the user expects to feel and what he feels, this misbalance in perception can quickly lead to nausea. Fast movements and blunt transitions can quickly make a user feel sick and things such as rotating horizons have the same effect as being on a ship. Asking the user to move their head or body can easily disorient them and make them sick. Considering the importance of motion sickness, we´ll focus more on it than the previous two challenges.</p>
+<p>First, we need to define what motion sickness really is. According to Lawson, B.D. (2014), motion sickness refers to adverse symptoms and readily available observable signs that are associated with exposure to real and/or apparent motion. Explained in plain words, motion sickness manifests itself when your eyes tell you that you are moving and your body feels otherwise.</p>
+<p>There are three contributing factors why motion sickness occurs:</p>
+<ol><li>System factors 2.	User factors 3.	Application design factors</li></ol>
+<p>These factors cause mismatches between what you see and what your body feels and they manifest in an unpleasant way. For the purpose and clarity of this post, we will focus only on the application design factors and ignore the first two. Additionally, we have to assume that we cannot control the user factors and that users are using high-end hardware that have low latency, high accuracy and high refresh rate. By having these assumptions in place, we can now focus on the application design decisions that need to be made in order to reduce motion sickness.</p>
+<p>In line with the above, the users need to have as much control of their navigation as possible. This is why UX designers need to avoid moving the user around without asking the user for some input. All unexpected changes in the environment which the user is not able to control, will cause the entire virtual world to move in a weird way and result in mismatches between the user´s movement and what they are seeing in their VR headset. Let us try to illustrate it more clearly with a real-world example. Pilots who control their plane experience motion sickness on rare occasions but some of them report motion sickness when they are travelling as passengers. Another thing that we have to ensure is to reduce all types of fidelity and head motion if the hardware cannot support it. If the design has high fidelity, it can use up much more processing power and negatively affect the frame rate in the VR headset. Varying frames per second are one of the recipes for causing motion sickness.</p>
+<p>Lack of processing power can also cause latency and physical head movements have to be limited when designing the experience for mobile VR. Mobile devices have significantly less computational power when compared to desktop VR experiences. But this approach can reduce the overall quality of the experience and one way of dealing with it is to reduce the amount of polygons in the environment to make room for more head motion.</p>
+<p>Conclusion</p>
+<p>As we continue to walk on the road of UX design for VR, the standard interfaces that we used for 2D no longer apply. Because there is now a Z-axis and the users are no longer able to see their hands in VR, UX experts face an ultimate challenge – they have to reinvent new ways of interacting. Actions such as touching, taking, selecting, and pointing must be conceptualized and created from scratch.</p>
+<p>As standards for communication and interaction in VR are yet to be defined, they are now quickly evolving as they once did for 2D. UX experts are now experimenting with various ways of interacting some of which are surely to become standardized in near future. For now, we can just continue asking ourselves which road the evolution will take us. Will be able to create and customize our own experiences? Will be able to see one another while browsing the web? Nobody knows exactly in which direction VR will take us but one thing is certain: the opportunity for UX designers is huge as they have to come up with completely new ways of interaction.</p>
+<p>The opportunity for UX professionals and enthusiasts is massive. We will have to conceptualize completely new ways of interaction for shopping, education, collaboration, content presentation, entertainment and more. The whole concept of VR is still relatively new and no rules have yet been carved into stone.</p></article></div></section>
+<section class="bg-mist"><div class="wrap"><div class="section-head"><h2>More from the blog</h2></div><div class="grid-3"><article class="card"><img src="/images/channel-dynamics-trustbadges.png" alt="" loading="lazy"><div class="body"><span class="tag">10 July 2018</span><h3>Trust Badges can Increase Your Conversion Rate</h3><p>There is a simple way to increase conversion on any website selling products or services. Use trust badges. A study conducted by Synovate…</p><span class="arrow-link">Read article</span></div><a class="cover" href="/blog/trust-badges-can-increase-your-conversion-rate/" aria-label="Trust Badges can Increase Your Conversion Rate"></a></article><article class="card"><img src="/images/channel-dynamics-blog-31.jpg" alt="" loading="lazy"><div class="body"><span class="tag">10 May 2018</span><h3>Augmented Reality and its implications in UX</h3><p>Augmented Reality (AR) is everywhere. Whatever tech blog you open, there will be at least one post about it. As more and more technologies…</p><span class="arrow-link">Read article</span></div><a class="cover" href="/blog/augmented-reality-and-its-implications-in-ux/" aria-label="Augmented Reality and its implications in UX"></a></article><article class="card"><img src="/images/channel-dynamics-blog-5.jpg" alt="" loading="lazy"><div class="body"><span class="tag">20 September 2017</span><h3>Wireframing &amp; Prototyping Techniques</h3><p>When designing a new website or application you need to show off your concept to different people to gain their insight. These…</p><span class="arrow-link">Read article</span></div><a class="cover" href="/blog/wireframing-prototyping-techniques/" aria-label="Wireframing &amp; Prototyping Techniques"></a></article></div></div></section>
+<section class="cta-band"><div class="wrap"><div><h2>Want help applying this to your own site?</h2><p>Book a free strategy call and we’ll look at your biggest opportunities together.</p></div><a class="btn light" href="/contact/">Book a strategy call</a></div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <div class="cols">
+    <div>
+      <a class="logo" href="/"><img src="/images/channel-dynamics-logo-sml-red.png" alt="" width="40" height="40">Channel Dynamics</a>
+      <p>Let us help you grow your business. Please get in touch.</p>
+      <p style="margin-top:14px"><a href="mailto:hello@channeldynamics.io">hello@channeldynamics.io</a><br><a href="tel:02039620054">020 3962 0054</a></p>
+    </div>
+    <div><h4>Services</h4><ul><li><a href="/services/insight/usability-testing/">User testing</a></li><li><a href="/services/discover/expert-review/">Expert usability review</a></li><li><a href="/services/insight/customer-journey-mapping/">Customer journey mapping</a></li><li><a href="/services/insight/customer-persona-development/">Customer persona development</a></li><li><a href="/services/discover/analytics/">Google Analytics health check</a></li><li><a href="/services/predictable-selling-systems/">Predictable Selling Systems</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="/work/">Our work</a></li><li><a href="/about/">About us</a></li><li><a href="/training/">UX training</a></li><li><a href="/blog/">Blog</a></li><li><a href="/resources/">Free resources</a></li><li><a href="/contact/">Contact</a></li></ul></div>
+    <div>
+      <h4>Proud members of</h4>
+      <div class="badges"><a href="https://ixda.org/" target="_blank" rel="noopener"><img src="/images/channel-dynamics-ixda-logo-new-bw.png" alt="Interaction Design Association (IxDA)" loading="lazy"></a><a href="https://uxpa.org/" target="_blank" rel="noopener"><img src="/images/channel-dynamics-uxpa-logo-new-bw.png" alt="User Experience Professionals Association (UXPA)" loading="lazy"></a><a href="https://www.mrs.org.uk/" target="_blank" rel="noopener"><img src="/images/channel-dynamics-mrs-logo-new-bw.png" alt="Market Research Society (MRS)" loading="lazy"></a><a href="https://www.aqr.org.uk/" target="_blank" rel="noopener"><img src="/images/channel-dynamics-aqr-logo-new-bw.png" alt="Association for Qualitative Research (AQR)" loading="lazy"></a></div>
+      <h4 style="margin-top:22px">Partners</h4><div class="badges"><img src="/images/channel-dynamics-ga-logo.png" alt="Google Analytics" loading="lazy"><img src="/images/channel-dynamics-optimizely-logo.png" alt="Optimizely" loading="lazy"></div>
+    </div>
+  </div>
+  <div class="legal"><span>© Channel Dynamics Ltd. Registered in England &amp; Wales, company no. 11077677.</span><span><a href="/terms/">Terms &amp; conditions</a></span></div>
+</div></footer>
+</body>
+</html>
