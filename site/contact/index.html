@@ -383,19 +383,19 @@ ol.rank{list-style:none;display:grid;gap:14px;margin:0}
     <p style="margin-top:22px;color:var(--slate);font-size:15px">No recruitment agencies, please.</p>
     <img src="/images/channel-dynamics-contact-us.jpg" alt="" style="border-radius:16px;margin-top:30px" loading="lazy">
   </div>
-  <form class="form" id="cf" method="post" action="mailto:hello@eldingo.co.uk" onsubmit="return cdSend(this)">
+  <form class="form" id="cf" method="post" action="https://api.web3forms.com/submit" onsubmit="return cdSend(this)">
     <h3>Send us a message</h3>
-    
+    <input type="hidden" name="access_key" value="38311cd4-89f5-497a-9b2c-5714f50b5c86"><input type="hidden" name="subject" value="Website enquiry via eldingo.co.uk"><input type="hidden" name="from_name" value="Eldingo website"><input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
     <label>Your name<input name="name" required autocomplete="name"></label>
     <label>Email address<input name="email" type="email" required autocomplete="email"></label>
     <label>Company<input name="company" autocomplete="organization"></label>
     <label>Tell us about your project<textarea name="message" required></textarea></label>
     <button class="btn" type="submit">Send message</button>
-    <p class="form-note" style="font-size:13px;color:var(--slate)">Sending opens a pre-filled email in your mail app. You can also email us directly.</p>
+    <p class="form-note" style="font-size:13px;color:var(--slate)">We reply within one working day. No newsletters, no sharing of your details.</p>
     <div class="form-status" id="cfStatus" role="status" aria-live="polite"></div>
   </form>
 </div></div></section>
-<script>var CDF={key:"",mailto:"mailto:hello@eldingo.co.uk",subject:"Website enquiry via eldingo.co.uk",thanks:"Thank you. Your message has been sent and we will reply within one working day.",error:"Sorry, that did not send. Please email us directly:"};
+<script>var CDF={key:"38311cd4-89f5-497a-9b2c-5714f50b5c86",mailto:"mailto:hello@eldingo.co.uk",subject:"Website enquiry via eldingo.co.uk",thanks:"Thank you. Your message has been sent and we will reply within one working day.",error:"Sorry, that did not send. Please email us directly:"};
 function cdMail(f){var b='Name: '+f.name.value+'\nEmail: '+f.email.value+'\nCompany: '+f.company.value+'\n\n'+f.message.value;location.href=CDF.mailto+'?subject='+encodeURIComponent(CDF.subject)+'&body='+encodeURIComponent(b);}
 function cdSend(f){if(!CDF.key){cdMail(f);return false;}if(f.botcheck&&f.botcheck.checked){return false;}var st=document.getElementById('cfStatus');var btn=f.querySelector('button');btn.disabled=true;btn.textContent='Sending…';var data={};new FormData(f).forEach(function(v,k){data[k]=v;});delete data.botcheck;fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).then(function(r){return r.json()}).then(function(r){if(r.success){f.innerHTML='<h3>Message sent</h3><p>'+CDF.thanks+'</p>';}else{throw new Error(r.message||'send failed')}}).catch(function(e){btn.disabled=false;btn.textContent='Send message';st.innerHTML=CDF.error+' <a href="'+CDF.mailto+'">'+CDF.mailto.replace('mailto:','')+'</a>';});return false;}</script>
 </main>
