@@ -1,0 +1,15 @@
+<svg class="eldingo-anim" xmlns="http://www.w3.org/2000/svg" viewBox="0.00 -30.00 108.00 162.00" width="108" height="162"><style>.eldingo-anim .bulb{animation:on 2.2s ease-in-out 1 both}.eldingo-anim .halo,.eldingo-anim .halo2{transform-box:fill-box;transform-origin:center;animation:halo 2.2s ease-in-out 1 both}.eldingo-anim .sp{transform-box:fill-box;transform-origin:center;opacity:0;animation:burst 1.2s cubic-bezier(.2,.8,.2,1) calc(1.6s + var(--i)*.05s) 1 both}@keyframes on{0%,35%{fill:#D9DCE1}45%{fill:#FFC83D}52%{fill:#D9DCE1}60%,100%{fill:#FFC83D}}@keyframes halo{0%,55%{opacity:0}100%{opacity:1}}@keyframes burst{0%{opacity:0;transform:scale(.2)}40%{opacity:1;transform:scale(1.15)}100%{opacity:1;transform:scale(1)}}</style><g class="mark">
+<circle class="halo2" cx="53.00" cy="88.00" r="33.60" fill="#FFC83D" opacity=".12"/>
+<circle class="halo" cx="53.00" cy="88.00" r="23.20" fill="#FFC83D" opacity=".28"/>
+<g class="spokes">
+<line class="sp" style="--i:0" x1="53.00" y1="-7.00" x2="53.00" y2="-25.00" stroke="#FFC83D" stroke-width="6.00" stroke-linecap="round"/>
+<line class="sp" style="--i:1" x1="74.50" y1="66.50" x2="86.52" y2="54.48" stroke="#FFC83D" stroke-width="6.00" stroke-linecap="round"/>
+<line class="sp" style="--i:2" x1="83.40" y1="88.00" x2="105.40" y2="88.00" stroke="#FFC83D" stroke-width="6.00" stroke-linecap="round"/>
+<line class="sp" style="--i:3" x1="74.50" y1="109.50" x2="86.52" y2="121.52" stroke="#FFC83D" stroke-width="6.00" stroke-linecap="round"/>
+<line class="sp" style="--i:5" x1="31.50" y1="109.50" x2="19.48" y2="121.52" stroke="#FFC83D" stroke-width="6.00" stroke-linecap="round"/>
+<line class="sp" style="--i:6" x1="22.60" y1="88.00" x2="0.60" y2="88.00" stroke="#FFC83D" stroke-width="6.00" stroke-linecap="round"/>
+<line class="sp" style="--i:7" x1="31.50" y1="66.50" x2="19.48" y2="54.48" stroke="#FFC83D" stroke-width="6.00" stroke-linecap="round"/>
+</g>
+<rect class="stroke" x="45.00" y="0.00" width="16.00" height="56.00" rx="8.00" fill="#E4130E"/>
+<circle class="bulb" cx="53.00" cy="88.00" r="16.00" fill="#FFC83D"/>
+</g></svg>
