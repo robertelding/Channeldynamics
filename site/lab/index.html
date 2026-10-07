@@ -52,8 +52,8 @@ section{padding:96px 0}
 .site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
 .logo{display:flex;align-items:center;color:var(--brand)}
-.logo svg{height:34px;width:auto;overflow:visible;display:block}
-.logo .halo{transform-box:fill-box;transform-origin:center;animation:ep 3.2s ease-in-out infinite}.logo .bulb{transform-box:fill-box;transform-origin:50% 0;animation:es 4.5s ease-in-out infinite}@keyframes ep{0%,100%{opacity:.18;transform:scale(1)}50%{opacity:.34;transform:scale(1.18)}}@keyframes es{0%,100%{transform:rotate(0)}50%{transform:rotate(1.5deg)}}.logo:hover .bulb{animation:ef .7s ease-out 1,ew 1.4s ease-in-out 1}.logo:hover .ring{animation:er 1s ease-out 1}@keyframes ef{0%{filter:brightness(1)}20%{filter:brightness(.6)}35%{filter:brightness(1.35)}50%{filter:brightness(.9)}100%{filter:brightness(1.15)}}@keyframes ew{0%{transform:rotate(0)}25%{transform:rotate(-7deg)}55%{transform:rotate(5deg)}80%{transform:rotate(-2deg)}100%{transform:rotate(0)}}@keyframes er{0%{opacity:.7;r:11px}100%{opacity:0;r:36px}}@media(prefers-reduced-motion:reduce){.logo .halo,.logo .bulb{animation:none!important}}
+.logo svg{height:42px;width:auto;overflow:visible;display:block}
+.logo .halo{transform-box:fill-box;transform-origin:center;animation:ep 3.2s ease-in-out infinite}.logo .bulb{transform-box:fill-box;transform-origin:50% 0;animation:es 4.5s ease-in-out infinite}@keyframes ep{0%,100%{opacity:.16;transform:scale(1)}50%{opacity:.45;transform:scale(1.35)}}@keyframes es{0%,100%{transform:rotate(0)}30%{transform:rotate(2.5deg)}70%{transform:rotate(-2deg)}}.logo .bulb path{animation:eglow 3.2s ease-in-out infinite}@keyframes eglow{0%,100%{filter:brightness(1)}50%{filter:brightness(1.18) drop-shadow(0 0 4px rgba(255,200,61,.9))}}.logo .bulb{animation:es 4.5s ease-in-out infinite, eon 1.6s ease-out 1}@keyframes eon{0%{opacity:0}30%{opacity:1}40%{opacity:.3}55%{opacity:1}}.logo:hover .bulb{animation:ef .7s ease-out 1,ew 1.4s ease-in-out 1}.logo:hover .ring{animation:er 1s ease-out 1}@keyframes ef{0%{filter:brightness(1)}20%{filter:brightness(.6)}35%{filter:brightness(1.35)}50%{filter:brightness(.9)}100%{filter:brightness(1.15)}}@keyframes ew{0%{transform:rotate(0)}25%{transform:rotate(-7deg)}55%{transform:rotate(5deg)}80%{transform:rotate(-2deg)}100%{transform:rotate(0)}}@keyframes er{0%{opacity:.7;r:11px}100%{opacity:0;r:36px}}@media(prefers-reduced-motion:reduce){.logo .halo,.logo .bulb{animation:none!important}}
 .nav{display:flex;align-items:center;gap:4px;list-style:none}
 .nav>li{position:relative}
 .nav a{display:block;padding:10px 13px;color:var(--ink);font-weight:600;font-size:15px;border-radius:8px}
@@ -89,6 +89,7 @@ section{padding:96px 0}
 .hero.compact{padding:64px 0 56px}
 .hero.compact .visual img{aspect-ratio:16/10}
 .hero.plain .visual{display:none}.hero.plain .wrap{grid-template-columns:1fr}
+.hero .visual-mark{display:grid;place-items:center;min-height:260px}.hero .visual-mark .bulb-mark{height:260px}@media(max-width:860px){.hero .visual-mark{min-height:160px}.hero .visual-mark .bulb-mark{height:150px}}
 @media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:28px}.hero{padding:56px 0 44px}}
 /* stats */
 .stats{background:var(--brand);color:#fff;padding:38px 0}
@@ -190,6 +191,7 @@ section{padding:96px 0}
 /* services */
 .pillar{display:grid;grid-template-columns:72px 1fr;gap:22px;align-items:start;padding:30px;background:#fff;border:1px solid var(--line);border-radius:16px}
 .pillar img{width:72px;height:72px;object-fit:contain}
+.pillar{grid-template-columns:72px 1fr}
 .pillar h3{font-size:1.4rem;margin-bottom:8px}
 .pillar p{color:var(--slate);margin-bottom:14px}
 .pillar ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
@@ -304,9 +306,10 @@ details p{padding:0 0 18px;color:var(--slate)}
 .site-footer ul{list-style:none;display:grid;gap:8px}
 .site-footer a{color:rgba(255,255,255,.75)}
 .site-footer a:hover{color:#fff}
+.bulb-mark svg{height:100%;width:auto;overflow:visible}.bulb-mark{display:inline-block}
 .site-footer .logo{color:#fff;margin-bottom:16px}.site-footer .logo svg{height:30px}
 .site-footer .badges{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.site-footer .badges img{height:36px;width:auto;background:#fff;border-radius:6px;padding:5px}
+.site-footer .badges img{height:34px;width:auto;opacity:.85;transition:.2s}.site-footer .badges a:hover img{opacity:1}
 .site-footer .legal{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.55)}
 .breadcrumb{font-size:13px;color:var(--slate);margin-bottom:18px}
 .breadcrumb a{color:var(--slate)}
@@ -326,13 +329,13 @@ details p{padding:0 0 18px;color:var(--slate)}
   <ul class="nav" id="nav"><li><a href="/work/">Work</a></li><li><a href="/services/">Services</a><ul class="sub"><li><a href="/services/ai/">AI &amp; innovation</a></li><li><a href="/ai-readiness-check/">Free AI readiness check</a></li><li><a href="/services/service-design/">Service design</a></li><li><a href="/services/research/">Research &amp; insight</a></li><li><a href="/services/advisory/">Training &amp; advisory</a></li><li><a href="/services/public-sector/">Public sector &amp; GDS</a></li></ul></li><li><a href="/training/">Training</a></li><li><a href="/about/">About</a><ul class="sub"><li><a href="/about/">About us</a></li><li><a href="/about/leadership/">Leadership</a></li><li><a href="/lab/">The Lab</a></li><li><a href="/press-kit/">Press kit</a></li></ul></li><li><a href="/blog/">Blog</a></li><li><a href="/resources/">Resources</a></li><li><a href="/contact/">Contact</a></li><li class="cta"><a href="/contact/">Book a call</a></li></ul>
 </div></header>
 <main>
-<section class="hero compact plain noimg"><div class="wrap"><div>
+<section class="hero compact"><div class="wrap"><div>
       <div class="eyebrow">Lab</div>
       
       <h1>The Lab</h1>
       <p class="lead">Where we try things out. Products we have built, prototypes we have tested with real users, and concepts we are exploring with current AI models. Some are live, some are unfinished on purpose.</p>
       
-    </div></div></section>
+    </div><div class="visual visual-mark"><div class="bulb-mark logo" style="height:260px" aria-hidden="true"><svg viewBox="333 -6 52 109" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Eldingo"><circle class="halo" cx="358.92" cy="64.66" r="18.27" fill="var(--accent)" opacity="0.22"/><circle class="ring" cx="358.92" cy="64.66" r="11.42" fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0"/><rect class="stroke" x="353.21" y="0" width="11.42" height="39.98" rx="5.71" fill="var(--brand)"/><g class="bulb"><path d="M351.96 53.26 c0 4.08 -5.04 4.80 -5.04 11.04 a12.00 12.00 0 1 0 23.99 0 c0 -6.24 -5.04 -6.96 -5.04 -11.04z" fill="#FFC83D"/><rect x="352.68" y="49.66" width="12.48" height="3.60" rx="1.20" fill="var(--brand)"/><rect x="354.60" y="47.02" width="8.64" height="1.92" rx="0.96" fill="var(--brand)"/></g></svg></div></div></div></section>
 <section><div class="wrap"><div class="grid-2"><article class="card"><img src="/images/channel-dynamics-work-mystoryboarder.svg" alt="" loading="lazy"><div class="body"><span class="lab-status live">Live beta</span><h3>MyStoryboarder</h3><p>Our AI storyboarding product: type a beginning, middle and end, choose the number of scenes and get a professional storyboard in minutes, exportable as PDF or narrated video. Launched in beta with backing from Amazon AWS; used by teams at companies including Google, IBM and bp.</p><span class="arrow-link">Visit MyStoryboarder</span></div><a class="cover" href="https://mystoryboarder.com" aria-label="MyStoryboarder" target="_blank" rel="noopener"></a></article><article class="card"><img src="/images/channel-dynamics-blog-ai-readiness-health-check-12-questions.svg" alt="" loading="lazy"><div class="body"><span class="lab-status live">Live on this site</span><h3>AI readiness quick check</h3><p>Eight questions, an instant score and your three priorities, calculated in your browser. A taste of the full AI readiness health check and action plan.</p><span class="arrow-link">Try the quick check</span></div><a class="cover" href="/ai-readiness-check/" aria-label="AI readiness quick check"></a></article><article class="card"><img src="/images/channel-dynamics-work-dhsc-compass.svg" alt="" loading="lazy"><div class="body"><span class="lab-status">Proof of concept</span><h3>Compass for the NHS</h3><p>A proof-of-concept procurement service for the Department of Health and Social Care that helps clinicians and buyers choose medical devices from trusted evidence, with AI retrieving and summarising evidence and a human making every decision.</p><span class="arrow-link">Read the case study</span></div><a class="cover" href="/work/dhsc-compass/" aria-label="Compass for the NHS"></a></article><article class="card"><img src="/images/channel-dynamics-work-hmrc-making-tax-digital.svg" alt="" loading="lazy"><div class="body"><span class="lab-status live">Live on this site</span><h3>Interactive service blueprints</h3><p>We are turning case studies into scrollable blueprints so you can follow a service stage by stage, front stage and back stage, and see exactly where AI sits. Start with Compass and Making Tax Digital.</p><span class="arrow-link">See a blueprint</span></div><a class="cover" href="/work/hmrc-making-tax-digital/" aria-label="Interactive service blueprints"></a></article></div></div></section>
 <section class="cta-band"><div class="wrap"><div><h2>Got an idea you want to test?</h2><p>We can have a working prototype in front of users within two weeks.</p></div><a class="btn light" href="/contact/">Book a call</a></div></section>
 </main>

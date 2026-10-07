@@ -52,8 +52,8 @@ section{padding:96px 0}
 .site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
 .logo{display:flex;align-items:center;color:var(--brand)}
-.logo svg{height:34px;width:auto;overflow:visible;display:block}
-.logo .halo{transform-box:fill-box;transform-origin:center;animation:ep 3.2s ease-in-out infinite}.logo .bulb{transform-box:fill-box;transform-origin:50% 0;animation:es 4.5s ease-in-out infinite}@keyframes ep{0%,100%{opacity:.18;transform:scale(1)}50%{opacity:.34;transform:scale(1.18)}}@keyframes es{0%,100%{transform:rotate(0)}50%{transform:rotate(1.5deg)}}.logo:hover .bulb{animation:ef .7s ease-out 1,ew 1.4s ease-in-out 1}.logo:hover .ring{animation:er 1s ease-out 1}@keyframes ef{0%{filter:brightness(1)}20%{filter:brightness(.6)}35%{filter:brightness(1.35)}50%{filter:brightness(.9)}100%{filter:brightness(1.15)}}@keyframes ew{0%{transform:rotate(0)}25%{transform:rotate(-7deg)}55%{transform:rotate(5deg)}80%{transform:rotate(-2deg)}100%{transform:rotate(0)}}@keyframes er{0%{opacity:.7;r:11px}100%{opacity:0;r:36px}}@media(prefers-reduced-motion:reduce){.logo .halo,.logo .bulb{animation:none!important}}
+.logo svg{height:42px;width:auto;overflow:visible;display:block}
+.logo .halo{transform-box:fill-box;transform-origin:center;animation:ep 3.2s ease-in-out infinite}.logo .bulb{transform-box:fill-box;transform-origin:50% 0;animation:es 4.5s ease-in-out infinite}@keyframes ep{0%,100%{opacity:.16;transform:scale(1)}50%{opacity:.45;transform:scale(1.35)}}@keyframes es{0%,100%{transform:rotate(0)}30%{transform:rotate(2.5deg)}70%{transform:rotate(-2deg)}}.logo .bulb path{animation:eglow 3.2s ease-in-out infinite}@keyframes eglow{0%,100%{filter:brightness(1)}50%{filter:brightness(1.18) drop-shadow(0 0 4px rgba(255,200,61,.9))}}.logo .bulb{animation:es 4.5s ease-in-out infinite, eon 1.6s ease-out 1}@keyframes eon{0%{opacity:0}30%{opacity:1}40%{opacity:.3}55%{opacity:1}}.logo:hover .bulb{animation:ef .7s ease-out 1,ew 1.4s ease-in-out 1}.logo:hover .ring{animation:er 1s ease-out 1}@keyframes ef{0%{filter:brightness(1)}20%{filter:brightness(.6)}35%{filter:brightness(1.35)}50%{filter:brightness(.9)}100%{filter:brightness(1.15)}}@keyframes ew{0%{transform:rotate(0)}25%{transform:rotate(-7deg)}55%{transform:rotate(5deg)}80%{transform:rotate(-2deg)}100%{transform:rotate(0)}}@keyframes er{0%{opacity:.7;r:11px}100%{opacity:0;r:36px}}@media(prefers-reduced-motion:reduce){.logo .halo,.logo .bulb{animation:none!important}}
 .nav{display:flex;align-items:center;gap:4px;list-style:none}
 .nav>li{position:relative}
 .nav a{display:block;padding:10px 13px;color:var(--ink);font-weight:600;font-size:15px;border-radius:8px}
@@ -89,6 +89,7 @@ section{padding:96px 0}
 .hero.compact{padding:64px 0 56px}
 .hero.compact .visual img{aspect-ratio:16/10}
 .hero.plain .visual{display:none}.hero.plain .wrap{grid-template-columns:1fr}
+.hero .visual-mark{display:grid;place-items:center;min-height:260px}.hero .visual-mark .bulb-mark{height:260px}@media(max-width:860px){.hero .visual-mark{min-height:160px}.hero .visual-mark .bulb-mark{height:150px}}
 @media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:28px}.hero{padding:56px 0 44px}}
 /* stats */
 .stats{background:var(--brand);color:#fff;padding:38px 0}
@@ -190,6 +191,7 @@ section{padding:96px 0}
 /* services */
 .pillar{display:grid;grid-template-columns:72px 1fr;gap:22px;align-items:start;padding:30px;background:#fff;border:1px solid var(--line);border-radius:16px}
 .pillar img{width:72px;height:72px;object-fit:contain}
+.pillar{grid-template-columns:72px 1fr}
 .pillar h3{font-size:1.4rem;margin-bottom:8px}
 .pillar p{color:var(--slate);margin-bottom:14px}
 .pillar ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
@@ -304,9 +306,10 @@ details p{padding:0 0 18px;color:var(--slate)}
 .site-footer ul{list-style:none;display:grid;gap:8px}
 .site-footer a{color:rgba(255,255,255,.75)}
 .site-footer a:hover{color:#fff}
+.bulb-mark svg{height:100%;width:auto;overflow:visible}.bulb-mark{display:inline-block}
 .site-footer .logo{color:#fff;margin-bottom:16px}.site-footer .logo svg{height:30px}
 .site-footer .badges{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.site-footer .badges img{height:36px;width:auto;background:#fff;border-radius:6px;padding:5px}
+.site-footer .badges img{height:34px;width:auto;opacity:.85;transition:.2s}.site-footer .badges a:hover img{opacity:1}
 .site-footer .legal{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:rgba(255,255,255,.55)}
 .breadcrumb{font-size:13px;color:var(--slate);margin-bottom:18px}
 .breadcrumb a{color:var(--slate)}

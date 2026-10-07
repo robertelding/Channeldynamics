@@ -9,7 +9,7 @@ _Static site on Cloudflare Pages, deployed from GitHub. Same stack as porticosui
 | Website (static, built from the CMS) | Cloudflare Pages, auto-deploy from GitHub | £0 |
 | Contact form | none — opens a pre-filled email (mailto) | £0 |
 
-Everything deploys from `github.com/robertelding/Channeldynamics`; every commit to `main` publishes `site/`.
+Everything deploys from `github.com/robertelding/eldingo`; every commit to `main` publishes `site/`.
 
 ## Phase 1 — Deploy to Cloudflare Pages via GitHub Actions (one-off, ~5 minutes)
 The repo deploys itself with `.github/workflows/deploy.yml` (wrangler → Cloudflare Pages). This avoids the
@@ -25,14 +25,23 @@ Cloudflare GitHub-app connection, which would not list this repo.
 - [ ] If a `channeldynamics` Pages project already exists and shows a 522, the workflow deploys into it; if it was
       deleted, the workflow recreates it
 
-## Phase 2 — Domain & DNS
-- [ ] Decide the live domain (the old site referenced **channeldynamics.io**). In Cloudflare → Websites → Add site
-      (free plan) if the domain isn't already on Cloudflare; move the nameservers at the registrar
-- [ ] Pages project → **Custom domains** → add `channeldynamics.io` and `www.channeldynamics.io`
-      (Cloudflare creates the CNAME records; www redirects to the apex)
-- [ ] SSL/TLS mode: **Full (strict)**; enable **Always use HTTPS**
-- [ ] If the domain differs, change **Site settings → Live site URL** in the CMS (canonical links, sitemap,
-      Open Graph) and rebuild
+## Phase 2 — Move to eldingo.co.uk (the brand's domain)
+The repo is now `github.com/robertelding/eldingo`; the Pages project is still called `channeldynamics` (the name is
+internal and cannot be renamed; the custom domain is what visitors see).
+- [ ] **You:** Cloudflare → Websites → **Add a site** → `eldingo.co.uk` → Free plan. Cloudflare shows two nameservers.
+- [ ] **You:** at LCN (where eldingo.co.uk is registered) → Manage domain → Nameservers → replace LCN's with the two
+      Cloudflare nameservers. Wait until Cloudflare shows the zone as **Active** (minutes to a few hours).
+- [ ] **Either:** GitHub → Actions → **Attach custom domain to Pages** → Run workflow (domain `eldingo.co.uk`, project
+      `channeldynamics`). It attaches apex + www using the repo's Cloudflare secrets; if the token cannot edit DNS it
+      says so, and you finish in Cloudflare → Workers & Pages → channeldynamics → Custom domains → Set up a custom
+      domain (one click each for `eldingo.co.uk` and `www.eldingo.co.uk`).
+- [ ] **Claude Code:** switch *Site settings → Live site URL* to `https://eldingo.co.uk`, add the host redirect
+      `https://channeldynamics.io/*  https://eldingo.co.uk/:splat  301` (and www) at the top of `site/_redirects`,
+      rebuild, push. Keep channeldynamics.io registered and on the same Pages project so the redirects keep working.
+- [ ] SSL/TLS: Full (strict) + Always Use HTTPS on the new zone.
+- [ ] Email: Cloudflare → eldingo.co.uk → Email → Email Routing → forward `hello@eldingo.co.uk` to your Gmail, then
+      change *Site settings → Email* in the CMS.
+- [ ] Search Console: add `eldingo.co.uk`, submit the sitemap, and use **Change of address** from channeldynamics.io.
 
 ## Phase 3 — Retire the WordPress site
 - [ ] Confirm the new site is live on the custom domain

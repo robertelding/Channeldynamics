@@ -1,0 +1,48 @@
+# One-off: attach custom domains to the Cloudflare Pages project using the repo's Cloudflare secrets.
+# Run from the Actions tab (workflow_dispatch) AFTER the zone exists on Cloudflare and its nameservers are active.
+# The token needs "Cloudflare Pages: Edit". If it also has "Zone: DNS: Edit" for the zone, the CNAME records are
+# created here too; otherwise Cloudflare creates them when you confirm the domain in the dashboard.
+name: Attach custom domain to Pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      domain:
+        description: "Apex domain to attach (e.g. eldingo.co.uk)"
+        required: true
+        default: "eldingo.co.uk"
+      project:
+        description: "Pages project name"
+        required: true
+        default: "channeldynamics"
+
+jobs:
+  attach:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add apex and www custom domains to the Pages project
+        env:
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          DOMAIN: ${{ inputs.domain }}
+          PROJECT: ${{ inputs.project }}
+        run: |
+          set -e
+          for d in "$DOMAIN" "www.$DOMAIN"; do
+            echo "== attaching $d"
+            curl -sS -X POST "https://api.cloudflare.com/client/v4/accounts/$ACCOUNT/pages/projects/$PROJECT/domains" \
+              -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
+              --data "{\"name\":\"$d\"}" | python3 -c 'import json,sys; r=json.load(sys.stdin); print("success:", r.get("success"), r.get("errors") or "", r.get("result",{}).get("status",""))'
+          done
+      - name: Create DNS records if the token is allowed to
+        env:
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          DOMAIN: ${{ inputs.domain }}
+          PROJECT: ${{ inputs.project }}
+        run: |
+          ZONE=$(curl -sS "https://api.cloudflare.com/client/v4/zones?name=$DOMAIN" -H "Authorization: Bearer $TOKEN" | python3 -c 'import json,sys; r=json.load(sys.stdin); print((r.get("result") or [{}])[0].get("id",""))')
+          if [ -z "$ZONE" ]; then echo "Zone not visible to this token; add the CNAME records in the dashboard (Pages → Custom domains will offer to do it)."; exit 0; fi
+          for pair in "$DOMAIN" "www.$DOMAIN"; do
+            curl -sS -X POST "https://api.cloudflare.com/client/v4/zones/$ZONE/dns_records" -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" \
+              --data "{\"type\":\"CNAME\",\"name\":\"$pair\",\"content\":\"$PROJECT.pages.dev\",\"proxied\":true}" | python3 -c 'import json,sys; r=json.load(sys.stdin); print("dns", r.get("success"), r.get("errors") or "")'
+          done
