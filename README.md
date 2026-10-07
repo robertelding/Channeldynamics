@@ -1,4 +1,4 @@
-# Eldingo — eldingo.co.uk (currently channeldynamics.io)
+# Eldingo — eldingo.co.uk
 
 Website, content management and build tooling for Channel Dynamics Ltd, a UX, service design and
 conversion consultancy. Static site, no servers.

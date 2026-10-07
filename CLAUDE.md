@@ -7,7 +7,8 @@ UX training, a blog archive and free resources. It replaces the old WordPress si
 
 ## Layout
 - `site/` — the published website. `.github/workflows/deploy.yml` pushes it to Cloudflare Pages on every push to
-  `main` (project `channeldynamics`, secrets `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` live in GitHub Actions secrets)
+  `main` (project `channeldynamics`, secrets `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` live in GitHub Actions secrets).
+  `functions/` holds Pages Functions (currently only the host-redirect middleware).
 - `cms/channel-dynamics-cms.html` — single-file Site Manager; its `default-content` JSON block drives every page,
   and its `window.CD.buildPages()` renderer is shared with the build script
 - `tools/` — `node tools/build-site.js` (build all pages), `node tools/apply-content.js <backup.json>` (publish a
@@ -26,9 +27,10 @@ clients, boards and NED searches) · `/resources/` · `/blog/` + `/blog/<slug>/`
 Old WordPress paths and the pre-October-2026 service paths 301 in `site/_redirects`.
 
 ## Brand direction (decided Oct 2026)
-The site IS now branded **Eldingo** (since Oct 2026) while still served from channeldynamics.io; Channel Dynamics Ltd
-stays the legal entity. Verbatim testimonials still say "Channel Dynamics" and must not be edited. Domain move to
-eldingo.co.uk is Phase 3 (update Site settings → Live site URL, 301s, Search Console). Positioning: AI, service design and innovation, research
+The site is **Eldingo**, live at https://eldingo.co.uk (canonical). channeldynamics.io, www.channeldynamics.io and
+www.eldingo.co.uk 301 to it via `functions/_middleware.js` (Cloudflare Pages Functions, deployed by wrangler from the
+repo root). Channel Dynamics Ltd stays the legal entity; verbatim testimonials still say "Channel Dynamics" and must
+not be edited. Email: hello@eldingo.co.uk (Cloudflare Email Routing). Contact form: Web3Forms key in the CMS. Positioning: AI, service design and innovation, research
 and future concept design. Predictable Selling Systems and Traffic pages were removed. Voice is "we".
 Recent-work case studies (2020–26) come from Robert's CV; they state what the client reported and invent no metrics.
 Robert resells **RedOS by redfirst.ai** (page under the AI pillar); keep its description consistent with redfirst.ai.

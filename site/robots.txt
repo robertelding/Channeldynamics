@@ -1,5 +1,5 @@
-# Eldingo — https://channeldynamics.io
+# Eldingo — https://eldingo.co.uk
 User-agent: *
 Allow: /
 
-Sitemap: https://channeldynamics.io/sitemap.xml
+Sitemap: https://eldingo.co.uk/sitemap.xml

@@ -28,16 +28,16 @@ Cloudflare GitHub-app connection, which would not list this repo.
 ## Phase 2 — Move to eldingo.co.uk (the brand's domain)
 The repo is now `github.com/robertelding/eldingo`; the Pages project is still called `channeldynamics` (the name is
 internal and cannot be renamed; the custom domain is what visitors see).
-- [ ] **You:** Cloudflare → Websites → **Add a site** → `eldingo.co.uk` → Free plan. Cloudflare shows two nameservers.
-- [ ] **You:** at LCN (where eldingo.co.uk is registered) → Manage domain → Nameservers → replace LCN's with the two
+- [x] **You:** Cloudflare → Websites → **Add a site** → `eldingo.co.uk` → Free plan. Cloudflare shows two nameservers.
+- [x] **You:** at LCN (where eldingo.co.uk is registered) → Manage domain → Nameservers → replace LCN's with the two
       Cloudflare nameservers. Wait until Cloudflare shows the zone as **Active** (minutes to a few hours).
-- [ ] **Either:** GitHub → Actions → **Attach custom domain to Pages** → Run workflow (domain `eldingo.co.uk`, project
+- [x] **Either:** GitHub → Actions → **Attach custom domain to Pages** → Run workflow (domain `eldingo.co.uk`, project
       `channeldynamics`). It attaches apex + www using the repo's Cloudflare secrets; if the token cannot edit DNS it
       says so, and you finish in Cloudflare → Workers & Pages → channeldynamics → Custom domains → Set up a custom
       domain (one click each for `eldingo.co.uk` and `www.eldingo.co.uk`).
-- [ ] **Claude Code:** switch *Site settings → Live site URL* to `https://eldingo.co.uk`, add the host redirect
-      `https://channeldynamics.io/*  https://eldingo.co.uk/:splat  301` (and www) at the top of `site/_redirects`,
-      rebuild, push. Keep channeldynamics.io registered and on the same Pages project so the redirects keep working.
+- [x] Done 2026-10-07: Site URL is `https://eldingo.co.uk`; `functions/_middleware.js` 301s channeldynamics.io, www.channeldynamics.io
+      and www.eldingo.co.uk to the canonical host. Keep channeldynamics.io registered and attached to the same Pages
+      project so those redirects keep working.
 - [ ] SSL/TLS: Full (strict) + Always Use HTTPS on the new zone.
 - [ ] Email: Cloudflare → eldingo.co.uk → Email → Email Routing → add and verify your Gmail as a destination, then a
       custom address `hello` → that destination. (The site already shows hello@eldingo.co.uk.)
