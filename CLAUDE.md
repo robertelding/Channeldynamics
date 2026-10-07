@@ -16,10 +16,18 @@ UX training, a blog archive and free resources. It replaces the old WordPress si
 - `docs/GO-LIVE.md` — hosting/launch runbook.
 
 ## Site map
-`/` · `/work/` + `/work/<slug>/` (12 case studies) · `/services/` + `/services/<pillar>/` (discover, insight,
-optimise) + `/services/<pillar>/<slug>/` (10 pages) + `/services/predictable-selling-systems/`, `service-design/`,
-`analytics-reporting/`, `traffic/` · `/training/` · `/about/` · `/resources/` · `/blog/` + `/blog/<slug>/` (36 posts)
-· `/contact/` · `/terms/`. Old WordPress paths 301 in `site/_redirects`.
+`/` · `/work/` + `/work/<slug>/` (25 case studies: 13 recent 2020–26 in group `recent`, 12 earlier) ·
+`/services/` + `/services/<pillar>/` (ai, service-design, research, advisory) + `/services/<pillar>/<slug>/`
+(20 pages) + `/services/public-sector/` · `/training/` · `/about/` · `/about/leadership/` (director profile for
+clients, boards and NED searches) · `/resources/` · `/blog/` + `/blog/<slug>/` (41 posts) · `/contact/` · `/terms/`.
+Old WordPress paths and the pre-October-2026 service paths 301 in `site/_redirects`.
+
+## Brand direction (decided Oct 2026)
+The site will be rebranded **Eldingo** (domain eldingo.co.uk; Channel Dynamics Ltd stays the legal entity) in the
+redesign phase. Until then the site name stays "Channel Dynamics". New copy avoids the brand name where possible so
+the rename is a Site-settings change plus a find/replace. Positioning: AI, service design and innovation, research
+and future concept design. Predictable Selling Systems and Traffic pages were removed. Voice is "we".
+Recent-work case studies (2020–26) come from Robert's CV; they state what the client reported and invent no metrics.
 
 ## Standard workflow for any change
 1. Edit the content JSON in the CMS (or via the Site Manager UI → Backup JSON → `apply-content.js`)
