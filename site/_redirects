@@ -24,3 +24,20 @@
 /services_old/             /services/                 301
 /*-old/                    /services/                 301
 /wp-content/uploads/*      /images/                   301
+# October 2026 restructure: service groups
+/services/predictable-selling-systems/   /services/ai/                                   301
+/services/traffic/                       /services/                                      301
+/services/analytics-reporting/           /services/research/analytics/                   301
+/services/discover/analytics/            /services/research/analytics/                   301
+/services/discover/expert-review/        /services/research/expert-review/               301
+/services/discover/                      /services/research/                             301
+/services/insight/card-sorting/          /services/research/card-sorting/                301
+/services/insight/usability-testing/     /services/research/usability-testing/           301
+/services/insight/customer-journey-mapping/      /services/service-design/customer-journey-mapping/      301
+/services/insight/customer-persona-development/  /services/service-design/customer-persona-development/  301
+/services/insight/                       /services/research/                             301
+/services/optimise/a-b-multivariate-testing/     /services/research/a-b-multivariate-testing/            301
+/services/optimise/information-architecture/     /services/service-design/information-architecture/      301
+/services/optimise/user-interface-design/        /services/service-design/user-interface-design/         301
+/services/optimise/wireframing/          /services/service-design/wireframing/           301
+/services/optimise/                      /services/service-design/                       301
