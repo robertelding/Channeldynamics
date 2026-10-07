@@ -99,8 +99,8 @@
   "name": "Eldingo",
   "legalName": "Channel Dynamics Ltd",
   "url": "https://channeldynamics.io",
-  "email": "hello@channeldynamics.io",
-  "phone": "020 3962 0054",
+  "email": "hello@eldingo.co.uk",
+  "phone": "",
   "addressLine1": "199 Bishopsgate",
   "addressCity": "London",
   "addressPostcode": "EC2A 2EX",
@@ -3434,7 +3434,7 @@
   "faqs": [
    {
     "q": "How do I book a training course?",
-    "a": "Email us at hello@channeldynamics.io or use the contact page and we will confirm availability, dates and payment details."
+    "a": "Email us at hello@eldingo.co.uk or use the contact page and we will confirm availability, dates and payment details."
    },
    {
     "q": "Is the training right for me?",
@@ -3454,7 +3454,7 @@
    },
    {
     "q": "How can I pay?",
-    "a": "Courses and Certification programs can be paid through credit or debit card at online registration. We can issue an invoice statement on request in addition to the pdf confirmation sent out as part of the payment confirmation. (If you require an invoice to be sent for payment, please email hello@channeldynamics.io). We do not accept cheques at this time."
+    "a": "Courses and Certification programs can be paid through credit or debit card at online registration. We can issue an invoice statement on request in addition to the pdf confirmation sent out as part of the payment confirmation. (If you require an invoice to be sent for payment, please email hello@eldingo.co.uk). We do not accept cheques at this time."
    },
    {
     "q": "What is your cancellation policy?",
@@ -3462,7 +3462,7 @@
    },
    {
     "q": "Do you offer any discounts?",
-    "a": "We offer a student discount of 10% off individual courses. A valid student ID is required. A group discount of 10% is also available when three or more from the same organisation register for the same courses. Please contact hello@channeldynamics.io to discuss options."
+    "a": "We offer a student discount of 10% off individual courses. A valid student ID is required. A group discount of 10% is also available when three or more from the same organisation register for the same courses. Please contact hello@eldingo.co.uk to discuss options."
    },
    {
     "q": "Are there any other costs apart from the course fees?",
@@ -3958,15 +3958,19 @@
  "contact": {
   "eyebrow": "Contact",
   "title": "How can we help?",
-  "intro": "Please tell us about your predictable selling or conversion project and a member of our team will be in touch to learn more and discuss how we can help you.",
+  "intro": "Tell us about your project, your AI question or the role you have in mind, and we will reply within one working day.",
   "detailsHeading": "Contact details",
-  "hours": "9am–5pm, Monday to Friday",
+  "hours": "Monday to Friday, 9am to 5pm UK time",
   "note": "No recruitment agencies, please.",
   "image": "/images/channel-dynamics-contact-us.jpg",
-  "formHeading": "Tell us about your project",
+  "formHeading": "Send us a message",
   "formButton": "Send message",
-  "formSubject": "Website enquiry",
-  "formNote": "Sending opens a pre-filled email in your mail app. You can also email us directly."
+  "formSubject": "Website enquiry via eldingo.co.uk",
+  "formNote": "Sending opens a pre-filled email in your mail app. You can also email us directly.",
+  "formNoteLive": "We reply within one working day. No newsletters, no sharing of your details.",
+  "formThanks": "Thank you. Your message has been sent and we will reply within one working day.",
+  "formError": "Sorry, that did not send. Please email us directly:",
+  "formAccessKey": ""
  },
  "terms": {
   "title": "Terms and conditions",
@@ -4312,7 +4316,7 @@
    },
    {
     "label": "Contact",
-    "value": "hello@channeldynamics.io"
+    "value": "hello@eldingo.co.uk"
    }
   ],
   "ctaHeading": "Need something else?",
@@ -4791,6 +4795,9 @@ ol.rank{list-style:none;display:grid;gap:14px;margin:0}
 .form label{font-size:13px;font-weight:700}
 .form input,.form textarea,.form select{width:100%;border:1px solid var(--line);border-radius:8px;padding:12px;font-family:inherit;font-size:15px;background:#fff;margin-top:6px}
 .form textarea{min-height:130px}
+.form .hp{display:none}
+.form-status{font-size:14px;color:var(--brand);margin-top:4px}
+.form-status a{font-weight:700}
 /* footer */
 .site-footer{background:var(--brand);color:rgba(255,255,255,.75);padding:64px 0 30px;font-size:14px}
 .site-footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}
@@ -5219,6 +5226,7 @@ ${ctaBand(c, c.blog.ctaHeading, c.blog.ctaText)}`;
   function contactPage(c){
     const K=c.contact, S=c.site;
     const mailto = `mailto:${S.email}`;
+    const key = (K.formAccessKey||'').trim();
     const body=`${hero({title:K.title,text:K.intro,eyebrow:K.eyebrow,compact:true,plain:true})}
 <section style="padding-top:20px"><div class="wrap"><div class="contact-grid">
   <div>
@@ -5228,22 +5236,27 @@ ${ctaBand(c, c.blog.ctaHeading, c.blog.ctaText)}`;
       ${S.phone?`<div><dt>Phone</dt><dd><a href="tel:${attr(S.phone.replace(/\s+/g,''))}">${esc(S.phone)}</a></dd></div>`:''}
       ${S.addressLine1?`<div><dt>Address</dt><dd>${esc(S.name)}<br>${esc(S.addressLine1)}<br>${esc(S.addressCity)} ${esc(S.addressPostcode)}</dd></div>`:''}
       ${K.hours?`<div><dt>Office hours</dt><dd>${esc(K.hours)}</dd></div>`:''}
+      ${K.linkedin||c.leadership.linkedin?`<div><dt>LinkedIn</dt><dd><a href="${attr(K.linkedin||c.leadership.linkedin)}" target="_blank" rel="noopener">Robert Elding on LinkedIn</a></dd></div>`:''}
     </dl>
     ${K.note?`<p style="margin-top:22px;color:var(--slate);font-size:15px">${esc(K.note)}</p>`:''}
     ${K.image?`<img src="${attr(K.image)}" alt="" style="border-radius:16px;margin-top:30px" loading="lazy">`:''}
   </div>
-  <form class="form" onsubmit="return cdSend(this)">
+  <form class="form" id="cf" method="post" action="${key?'https://api.web3forms.com/submit':attr(mailto)}" onsubmit="return cdSend(this)">
     <h3>${esc(K.formHeading)}</h3>
-    <label>Your name<input name="name" required></label>
-    <label>Email address<input name="email" type="email" required></label>
-    <label>Company<input name="company"></label>
+    ${key?`<input type="hidden" name="access_key" value="${attr(key)}"><input type="hidden" name="subject" value="${attr(K.formSubject||'Website enquiry')}"><input type="hidden" name="from_name" value="${attr(S.name)} website"><input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">`:''}
+    <label>Your name<input name="name" required autocomplete="name"></label>
+    <label>Email address<input name="email" type="email" required autocomplete="email"></label>
+    <label>Company<input name="company" autocomplete="organization"></label>
     <label>Tell us about your project<textarea name="message" required></textarea></label>
     <button class="btn" type="submit">${esc(K.formButton||'Send message')}</button>
-    <p style="font-size:13px;color:var(--slate)">${esc(K.formNote||'')}</p>
+    <p class="form-note" style="font-size:13px;color:var(--slate)">${esc(key?(K.formNoteLive||'We reply within one working day.'):(K.formNote||''))}</p>
+    <div class="form-status" id="cfStatus" role="status" aria-live="polite"></div>
   </form>
 </div></div></section>
-<script>function cdSend(f){var b='Name: '+f.name.value+'\\nEmail: '+f.email.value+'\\nCompany: '+f.company.value+'\\n\\n'+f.message.value;location.href='${mailto}?subject='+encodeURIComponent('${esc(K.formSubject||'Website enquiry')}')+'&body='+encodeURIComponent(b);return false;}<\/script>`;
-    return {path:'/contact/', title:K.title, description:plain(K.intro), body};
+<script>var CDF={key:${JSON.stringify(key)},mailto:${JSON.stringify(mailto)},subject:${JSON.stringify(K.formSubject||'Website enquiry')},thanks:${JSON.stringify(K.formThanks||'Thank you. Your message has been sent and we will reply within one working day.')},error:${JSON.stringify(K.formError||'Sorry, that did not send. Please email us directly:')}};
+function cdMail(f){var b='Name: '+f.name.value+'\\nEmail: '+f.email.value+'\\nCompany: '+f.company.value+'\\n\\n'+f.message.value;location.href=CDF.mailto+'?subject='+encodeURIComponent(CDF.subject)+'&body='+encodeURIComponent(b);}
+function cdSend(f){if(!CDF.key){cdMail(f);return false;}if(f.botcheck&&f.botcheck.checked){return false;}var st=document.getElementById('cfStatus');var btn=f.querySelector('button');btn.disabled=true;btn.textContent='Sending…';var data={};new FormData(f).forEach(function(v,k){data[k]=v;});delete data.botcheck;fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)}).then(function(r){return r.json()}).then(function(r){if(r.success){f.innerHTML='<h3>Message sent</h3><p>'+CDF.thanks+'</p>';}else{throw new Error(r.message||'send failed')}}).catch(function(e){btn.disabled=false;btn.textContent='Send message';st.innerHTML=CDF.error+' <a href="'+CDF.mailto+'">'+CDF.mailto.replace('mailto:','')+'</a>';});return false;}<\/script>`;
+    return {path:'/contact/', title:K.title, description:plain(K.intro), body, crumbs:[{label:'Home',href:'/'},{label:'Contact',href:'/contact/'}]};
   }
 
   function termsPage(c){
@@ -5358,7 +5371,7 @@ const SCHEMAS = {
   quickcheck: {title:'AI readiness quick check', hint:'/ai-readiness-check/ — interactive scorer, runs entirely in the browser.', fields:[txt('eyebrow','Eyebrow'),txt('title','Title'),area('intro','Intro'),linesF('options','Answer options (lowest to highest)'),list('questions','Questions',[txt('area','Area'),area('q','Question'),area('hint','Hint'),area('action','Action shown when this scores low')],'q'),list('bands','Score bands',[{key:'min',label:'Minimum score',type:'number'},txt('name','Name'),area('text','Text')],'name'),txt('button','Button label'),txt('privacy','Privacy note'),txt('emailSubject','Email subject'),txt('ctaHeading','CTA heading'),area('ctaText','CTA text'),txt('ctaLabel','CTA button'),txt('ctaHref','CTA link')]},
   resources: {title:'Resources', hint:'Free downloads. Put files in site/downloads/.', fields:[txt('eyebrow','Eyebrow'),txt('title','Title'),area('intro','Intro'),list('items','Downloads',[txt('title','Title'),area('text','Text'),img('image','Preview image'),txt('file','File path (e.g. /downloads/x.pdf)'),txt('label','Button label')],'title'),txt('ctaHeading','CTA heading'),area('ctaText','CTA text')]},
   blog: {title:'Blog', hint:'Posts use simple markdown: ## heading, - bullets, ![alt](/images/x.jpg), > quote.', fields:[txt('eyebrow','Eyebrow'),txt('title','Title'),area('intro','Intro'),img('heroImage','Hero image'),txt('ctaHeading','CTA heading'),area('ctaText','CTA text'),list('posts','Posts',[txt('slug','Slug (URL)'),txt('title','Title'),txt('date','Date (YYYY-MM-DD)'),txt('author','Author'),img('hero','Hero image'),area('excerpt','Excerpt'),{key:'body',label:'Body (markdown)',type:'textarea',tall:true}],'title')]},
-  contact: {title:'Contact', hint:'Email, phone and address come from Site settings.', fields:[txt('eyebrow','Eyebrow'),txt('title','Title'),area('intro','Intro'),txt('detailsHeading','Details heading'),txt('hours','Office hours'),area('note','Note'),img('image','Image'),txt('formHeading','Form heading'),txt('formButton','Form button'),txt('formSubject','Email subject'),area('formNote','Form note')]},
+  contact: {title:'Contact', hint:'Email, phone and address come from Site settings.', fields:[txt('eyebrow','Eyebrow'),txt('title','Title'),area('intro','Intro'),txt('detailsHeading','Details heading'),txt('hours','Office hours'),area('note','Note'),img('image','Image'),txt('formHeading','Form heading'),txt('formButton','Form button'),txt('formSubject','Email subject'),area('formNote','Form note (shown when no access key)'),txt('formAccessKey','Web3Forms access key','Create a free key at web3forms.com for the site email; messages are delivered to that inbox. Leave blank and the form opens an email instead.'),area('formNoteLive','Form note (when the form sends)'),area('formThanks','Thank-you message'),area('formError','Error message'),txt('linkedin','LinkedIn URL (optional override)')]},
   terms: {title:'Terms', hint:'/terms/ — markdown.', fields:[txt('title','Title'),{key:'body',label:'Body (markdown)',type:'textarea',tall:true}]}
 };
 const SIDEBAR=[['Site',['site','theme','nav','footer','seo','clients']],['Pages',['home','work','services','training','about','leadership','lab','tools','presskit','quickcheck','resources','blog','contact','terms']]];

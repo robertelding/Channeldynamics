@@ -39,8 +39,11 @@ internal and cannot be renamed; the custom domain is what visitors see).
       `https://channeldynamics.io/*  https://eldingo.co.uk/:splat  301` (and www) at the top of `site/_redirects`,
       rebuild, push. Keep channeldynamics.io registered and on the same Pages project so the redirects keep working.
 - [ ] SSL/TLS: Full (strict) + Always Use HTTPS on the new zone.
-- [ ] Email: Cloudflare → eldingo.co.uk → Email → Email Routing → forward `hello@eldingo.co.uk` to your Gmail, then
-      change *Site settings → Email* in the CMS.
+- [ ] Email: Cloudflare → eldingo.co.uk → Email → Email Routing → add and verify your Gmail as a destination, then a
+      custom address `hello` → that destination. (The site already shows hello@eldingo.co.uk.)
+- [ ] Contact form: go to web3forms.com, enter hello@eldingo.co.uk, confirm the email it sends, copy the access key, and
+      paste it into *Contact → Web3Forms access key* in the CMS (or give it to Claude Code). Rebuild and push. Until
+      then the form opens a pre-filled email instead. Test it once from the live site.
 - [ ] Search Console: add `eldingo.co.uk`, submit the sitemap, and use **Change of address** from channeldynamics.io.
 
 ## Phase 3 — Retire the WordPress site

@@ -54,4 +54,5 @@ Videos: leadership and About pages accept a `videos` list (YouTube ID or an .mp4
 - Brand is "Eldingo" (legal: Channel Dynamics Ltd). Testimonials and quotes stay verbatim even where they say Channel Dynamics.
 - Testimonials, client names and case-study results are real and must stay verbatim. No invented claims.
 - Images go in `site/images/`, named `channel-dynamics-*.jpg|png|webp`, web-optimised (< ~300 KB).
-- The contact form has no backend: it opens a pre-filled email. Don't add form handlers that need secrets in the repo.
+- The contact form posts to Web3Forms when `contact.formAccessKey` is set (an access key tied to hello@eldingo.co.uk;
+  it is designed to be public, not a secret) and falls back to a pre-filled email otherwise. No secrets in the repo.
