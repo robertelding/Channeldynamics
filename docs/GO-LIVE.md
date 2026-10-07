@@ -11,13 +11,19 @@ _Static site on Cloudflare Pages, deployed from GitHub. Same stack as porticosui
 
 Everything deploys from `github.com/robertelding/Channeldynamics`; every commit to `main` publishes `site/`.
 
-## Phase 1 — Cloudflare Pages project (one-off, ~5 minutes)
-- [ ] Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**
-- [ ] Pick the GitHub repo `robertelding/Channeldynamics` (authorise the Cloudflare GitHub app for it if asked)
-- [ ] Build settings: Framework preset **None** · Build command **(leave empty)** · Build output directory **`site`**
-- [ ] Save and Deploy → note the `*.pages.dev` URL and check every section renders
-      (`/`, `/work/post-office/`, `/services/insight/usability-testing/`, `/blog/`, `/contact/`)
-- [ ] Verify the old-URL redirects work, e.g. `/case-studies/cipfa/` → `/work/cipfa/`
+## Phase 1 — Deploy to Cloudflare Pages via GitHub Actions (one-off, ~5 minutes)
+The repo deploys itself with `.github/workflows/deploy.yml` (wrangler → Cloudflare Pages). This avoids the
+Cloudflare GitHub-app connection, which would not list this repo.
+- [ ] Cloudflare dashboard → profile icon (top right) → **My Profile** → **API Tokens** → **Create Token** →
+      **Create Custom Token**: name `channeldynamics-pages-deploy`; Permissions: **Account · Cloudflare Pages · Edit**;
+      Account Resources: your account. Create, then copy the token (it is shown once)
+- [ ] Cloudflare → **Workers & Pages** → copy the **Account ID** from the right-hand side of the overview page
+- [ ] GitHub → `robertelding/Channeldynamics` → **Settings** → **Secrets and variables** → **Actions** →
+      **New repository secret**, twice: `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`
+- [ ] GitHub → **Actions** tab → **Deploy to Cloudflare Pages** → **Run workflow** (or just push a commit)
+- [ ] Check `https://channeldynamics.pages.dev/` renders, and that `/case-studies/cipfa/` redirects to `/work/cipfa/`
+- [ ] If a `channeldynamics` Pages project already exists and shows a 522, the workflow deploys into it; if it was
+      deleted, the workflow recreates it
 
 ## Phase 2 — Domain & DNS
 - [ ] Decide the live domain (the old site referenced **channeldynamics.io**). In Cloudflare → Websites → Add site

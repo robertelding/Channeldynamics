@@ -6,7 +6,8 @@ UX training, a blog archive and free resources. It replaces the old WordPress si
 (chndynamics.wpenginepowered.com); copy and images were migrated from there in October 2026.
 
 ## Layout
-- `site/` — the published website (Cloudflare Pages serves this folder; push to `main` = live in ~1 min)
+- `site/` — the published website. `.github/workflows/deploy.yml` pushes it to Cloudflare Pages on every push to
+  `main` (project `channeldynamics`, secrets `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` live in GitHub Actions secrets)
 - `cms/channel-dynamics-cms.html` — single-file Site Manager; its `default-content` JSON block drives every page,
   and its `window.CD.buildPages()` renderer is shared with the build script
 - `tools/` — `node tools/build-site.js` (build all pages), `node tools/apply-content.js <backup.json>` (publish a

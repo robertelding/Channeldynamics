@@ -25,6 +25,6 @@ To edit content without code, open `cms/channel-dynamics-cms.html` in a browser.
 
 ## Deployment
 
-Cloudflare Pages, connected to this GitHub repository: every push to `main` republishes `site/`
-(build command: none; output directory: `site`). Custom domain and DNS are managed in Cloudflare.
+Cloudflare Pages. A GitHub Actions workflow (`.github/workflows/deploy.yml`) uploads `site/` with wrangler on
+every push to `main`. Custom domain and DNS are managed in Cloudflare.
 See `docs/GO-LIVE.md`.
