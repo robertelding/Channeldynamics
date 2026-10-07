@@ -34,8 +34,12 @@ Recent-work case studies (2020–26) come from Robert's CV; they state what the 
 Robert resells **RedOS by redfirst.ai** (page under the AI pillar); keep its description consistent with redfirst.ai.
 Design rules from Robert (Oct 2026): NO dark mode, lots of white space, colour client logos shown large, subtle motion only.
 The redfirst.ai reseller offer is branded **Switch On** (stages: Lightbulb session → Switch On → Build Out → Lights On),
-mapped to redfirst's Red Brief / Red Eye / Red Embed. Extra pages: `/lab/`, `/press-kit/`, `/ai-readiness-check/`
-(client-side scorer). Case studies may carry an interactive `blueprint` (lanes × steps). Brand concepts for the Eldingo!
+mapped to redfirst's Red Brief / Red Eye / Red Embed. Extra pages: `/lab/` (tools, products, explorations), `/press-kit/`, `/ai-readiness-check/`, `/tools/ai-use-case-prioritiser/`,
+`/tools/usability-test-participants/` (all client-side, logic in the renderer, wording in `tools`/`quickcheck` content).
+IMPORTANT: `site/_headers` caches /images/* for a year as immutable, so NEVER overwrite an image under the same
+name; give changed artwork a new filename (e.g. `eldingo-*`). Client logos: `eldingo-client-*.svg` (bp pulse, Tesco,
+Lloyd's, Lebara, DWP from Wikimedia Commons PD-textlogo; name plates for MoJ, DHSC, HMRC, MHCLG, Shell, WLGA).
+Illustrations: `eldingo-ill-*.svg`, generated in the brand style. Case studies may carry an interactive `blueprint` (lanes × steps). Brand concepts for the Eldingo!
 rename live in `brand/eldingo-logo-concepts.html` (A lightbulb, B bolt, C bell).
 Videos: leadership and About pages accept a `videos` list (YouTube ID or an .mp4 in site/downloads/); press items live in
 `leadership.press`. The Jazz FM / Mishcon interview (May 2025) is audio only, hosted at hellorayo.co.uk; link, don't copy.
