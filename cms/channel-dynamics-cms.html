@@ -138,6 +138,10 @@
      "href": "/services/ai/"
     },
     {
+     "label": "Free AI readiness check",
+     "href": "/ai-readiness-check/"
+    },
+    {
      "label": "Service design",
      "href": "/services/service-design/"
     },
@@ -171,6 +175,14 @@
     {
      "label": "Leadership",
      "href": "/about/leadership/"
+    },
+    {
+     "label": "The Lab",
+     "href": "/lab/"
+    },
+    {
+     "label": "Press kit",
+     "href": "/press-kit/"
     }
    ]
   },
@@ -203,11 +215,15 @@
     "href": "/services/ai/ai-readiness-health-check/"
    },
    {
+    "label": "Free AI readiness quick check",
+    "href": "/ai-readiness-check/"
+   },
+   {
     "label": "Rapid AI proof of concept",
     "href": "/services/ai/rapid-ai-proof-of-concept/"
    },
    {
-    "label": "RedOS by redfirst.ai",
+    "label": "Switch On (RedOS by redfirst.ai)",
     "href": "/services/ai/redos-ai-operating-system/"
    },
    {
@@ -240,6 +256,14 @@
    {
     "label": "Leadership",
     "href": "/about/leadership/"
+   },
+   {
+    "label": "The Lab",
+    "href": "/lab/"
+   },
+   {
+    "label": "Press kit",
+    "href": "/press-kit/"
    },
    {
     "label": "UX & AI training",
@@ -501,7 +525,21 @@
   },
   "pillarsEyebrow": "What we do",
   "pillarsHeading": "Four ways we work with you",
-  "pillarsText": "Research tells us what is true. Service design turns it into something people can use. AI is a tool we apply where it earns its place."
+  "pillarsText": "Research tells us what is true. Service design turns it into something people can use. AI is a tool we apply where it earns its place. Not sure where you stand? Take the free [AI readiness quick check](/ai-readiness-check/).",
+  "proofLabel": "Recent work with",
+  "proof": [
+   "Ministry of Justice",
+   "Department of Health and Social Care",
+   "HMRC",
+   "DWP",
+   "MHCLG",
+   "bp pulse",
+   "Tesco",
+   "Lloyd’s of London",
+   "Shell",
+   "Lebara",
+   "WLGA"
+  ]
  },
  "work": {
   "eyebrow": "Case studies",
@@ -551,7 +589,86 @@
     "resultParas": [
      "The department has a defined proof of concept, a service blueprint and tested prototypes to take forward. Engagement ran from September 2025 to March 2026."
     ],
-    "resultImages": []
+    "resultImages": [],
+    "blueprint": {
+     "title": "Compass: illustrative service blueprint",
+     "note": "Scroll sideways to follow a clinician from need to decision",
+     "stepsLabel": "Stage",
+     "lanes": [
+      {
+       "key": "user",
+       "name": "Clinician or buyer"
+      },
+      {
+       "key": "front",
+       "name": "Front stage"
+      },
+      {
+       "key": "back",
+       "name": "Back stage"
+      },
+      {
+       "key": "data",
+       "name": "Data & systems"
+      },
+      {
+       "key": "ai",
+       "name": "AI touchpoint"
+      },
+      {
+       "key": "pain",
+       "name": "As-is pain point"
+      }
+     ],
+     "steps": [
+      {
+       "title": "Identify a need",
+       "user": "A clinical team needs a device for a procedure or patient group.",
+       "front": "Start a Compass enquiry: what, for whom, by when.",
+       "back": "Procurement is notified of the need early rather than at purchase order stage.",
+       "data": "Procurement system, clinical request.",
+       "ai": "",
+       "pain": "Needs are raised informally and surface late."
+      },
+      {
+       "title": "Gather evidence",
+       "user": "Looks for trials, registries, safety notices and peer experience.",
+       "front": "A single evidence view for the device category.",
+       "back": "Evidence sources curated and kept current.",
+       "data": "Trials, registries, MHRA alerts, NHS supply chain, peer adoption data.",
+       "ai": "Retrieves and summarises evidence across sources, always showing the source.",
+       "pain": "Hours spent searching a dozen places; evidence is uneven."
+      },
+      {
+       "title": "Compare options",
+       "user": "Weighs outcomes, adoption, cost and safety.",
+       "front": "Side-by-side comparison with plain-language summaries.",
+       "back": "Framework and pricing data attached to each option.",
+       "data": "Framework agreements, pricing, outcomes data.",
+       "ai": "Drafts the comparison and flags gaps or conflicting evidence for a human to check.",
+       "pain": "Comparisons are rebuilt from scratch in spreadsheets."
+      },
+      {
+       "title": "Decide",
+       "user": "Chooses a device and records the rationale.",
+       "front": "Decision record with the evidence cited.",
+       "back": "Clinical governance sign-off where required.",
+       "data": "Decision log.",
+       "ai": "",
+       "pain": "Rationale is lost in email, so decisions are hard to defend later."
+      },
+      {
+       "title": "Procure and review",
+       "user": "Raises the order; later records how the device performed.",
+       "front": "Order raised from the decision; outcome captured at review.",
+       "back": "Outcomes feed back into the evidence base for the next buyer.",
+       "data": "Procurement system, outcomes registry.",
+       "ai": "Suggests when a review is due and summarises reported outcomes.",
+       "pain": "No feedback loop: the next team starts from zero."
+      }
+     ],
+     "footnote": "Illustrative and simplified from the proof-of-concept work. Not the department’s internal documentation. Every AI step hands a decision to a person."
+    }
    },
    {
     "slug": "ministry-of-justice",
@@ -630,7 +747,85 @@
     "resultParas": [
      "HMRC has a programme-level blueprint and optimised journeys to plan and prioritise against. Engagement ran from January to June 2025."
     ],
-    "resultImages": []
+    "resultImages": [],
+    "blueprint": {
+     "title": "Making Tax Digital: illustrative programme blueprint",
+     "note": "Scroll sideways to follow a business through a tax year",
+     "stepsLabel": "Stage",
+     "lanes": [
+      {
+       "key": "user",
+       "name": "Business or landlord"
+      },
+      {
+       "key": "front",
+       "name": "HMRC front stage"
+      },
+      {
+       "key": "back",
+       "name": "HMRC back stage"
+      },
+      {
+       "key": "data",
+       "name": "Software & data"
+      },
+      {
+       "key": "pain",
+       "name": "As-is pain point"
+      }
+     ],
+     "steps": [
+      {
+       "title": "Find out and sign up",
+       "user": "Learns they are in scope and signs up for Making Tax Digital.",
+       "front": "Guidance, eligibility checker, sign-up journey.",
+       "back": "Eligibility rules, identity verification.",
+       "data": "Government Gateway, taxpayer record.",
+       "pain": "Hard to tell who is in scope and when; agents and clients get different answers."
+      },
+      {
+       "title": "Choose software",
+       "user": "Picks compatible software or works through an agent.",
+       "front": "Software finder and agent authorisation.",
+       "back": "Software recognition, agent services account.",
+       "data": "Third-party software, APIs.",
+       "pain": "Choice is overwhelming; authorisation steps differ by route."
+      },
+      {
+       "title": "Keep digital records",
+       "user": "Records income and expenses as they happen.",
+       "front": "Nudges and reminders.",
+       "back": "Record-keeping rules.",
+       "data": "Software records, bank feeds.",
+       "pain": "Habit change is the hardest step and gets the least support."
+      },
+      {
+       "title": "Send quarterly updates",
+       "user": "Submits a summary each quarter.",
+       "front": "Confirmation and an in-year view of what is owed.",
+       "back": "Receipt, validation, estimated liability.",
+       "data": "Software to HMRC APIs.",
+       "pain": "Deadlines and corrections are unclear; errors compound across quarters."
+      },
+      {
+       "title": "Finalise the year",
+       "user": "Makes any adjustments and confirms the year.",
+       "front": "Final declaration journey.",
+       "back": "Reconciliation with other income sources.",
+       "data": "Full taxpayer record.",
+       "pain": "Several overlapping journeys for one event."
+      },
+      {
+       "title": "Pay",
+       "user": "Pays what is due.",
+       "front": "Payment options and plans.",
+       "back": "Collection and reconciliation.",
+       "data": "Payment systems.",
+       "pain": "The first bill under the new regime is the moment trust is won or lost."
+      }
+     ],
+     "footnote": "Illustrative and simplified from the programme-level work. Not HMRC’s internal documentation."
+    }
    },
    {
     "slug": "bp-pulse",
@@ -2279,7 +2474,7 @@
       "heading": "What you get",
       "paras": [
        "A short written report with a traffic-light readiness score across the five areas, the three to five opportunities most likely to pay back, the risks to resolve first, and a 90-day action plan with owners and effort estimates. We present it to your leadership team and stay available to help you act on it.",
-       "If the plan points to running the whole business on governed AI rather than one feature, we can take you straight into a Red Brief with our partner redfirst.ai. See [RedOS](/services/ai/redos-ai-operating-system/)."
+       "If the plan points to running the whole business on governed AI rather than one feature, we can take you straight into [Switch On](/services/ai/redos-ai-operating-system/), delivered on RedOS by our partner redfirst.ai. Not sure yet? Try the free [AI readiness quick check](/ai-readiness-check/)."
       ],
       "bullets": [],
       "images": []
@@ -2736,11 +2931,11 @@
    {
     "slug": "redos-ai-operating-system",
     "parent": "ai",
-    "name": "RedOS by redfirst.ai",
-    "title": "RedOS: an AI operating system for owner-led businesses",
+    "name": "Switch On: AI across the business",
+    "title": "Switch On: your whole business running on governed AI in 30 days",
     "heroImage": "",
     "intro": [
-     "Some businesses need more than a proof of concept. They need AI running across the whole company, with people and agents working to the same plan, the same knowledge and the same rules. For that we partner with redfirst.ai and resell RedOS, their AI operating system for owner-led businesses of roughly ten to two hundred people.",
+     "Some organisations need more than a proof of concept. They need AI running across the whole company, with people and agents working to the same plan, the same knowledge and the same rules. Switch On is our programme for exactly that, delivered on RedOS, the AI operating system from our partner redfirst.ai, which we resell and support.",
      "RedOS gives each client its own isolated instance, a fail-closed access gate so an agent can only do what a person in that role could do, and spend controlled per agent and per workflow. It is not a chat seat or a CRM feature, and it is not self-serve: a certified consultant installs it and is accountable for the outcome."
     ],
     "sections": [
@@ -2757,22 +2952,22 @@
       "images": []
      },
      {
-      "heading": "How an engagement runs",
+      "heading": "How Switch On runs",
       "paras": [
-       "Four stages, in order, each one designed to end."
+       "Four stages, in order, each one designed to end. Our names for them are below; redfirst.ai call them the Red Brief, Red Eye and Red Embed."
       ],
       "bullets": [
-       "**Red Brief.** Half a day, live on your business, for a fixed fee, with an exposure report prepared from public sources before the session and a wargame of three futures: a competitor attacks, you defend as you are today, you defend with AI. You leave knowing whether the rest is worth doing.",
-       "**Red Eye.** Thirty days on your own instance that end with RedOS live: a live pain removed, savings that cover the cost, and a piece of deferred work finally done.",
-       "**Red Embed.** An optional build phase for the agents, listeners and workflows your business uniquely needs.",
-       "**Live.** The licence continues; the build does not. A certified consultant stays accountable for the outcome."
+       "**Lightbulb session (half a day).** Live on your business, for a fixed fee, with an exposure report prepared from public sources before the session and a wargame of three futures: a competitor attacks, you defend as you are today, you defend with AI. You leave knowing whether the rest is worth doing.",
+       "**Switch On (30 days).** Thirty days on your own instance that end with RedOS live: a live pain removed, savings that cover the cost, and a piece of deferred work finally done.",
+       "**Build Out (optional).** The agents, listeners and workflows your business uniquely needs, approval-gated and pointed at your goals.",
+       "**Lights On (ongoing).** The licence continues; the build does not. A certified consultant stays accountable for the outcome."
       ],
       "images": []
      },
      {
       "heading": "Where it fits with our other services",
       "paras": [
-       "Our [AI readiness health check](/services/ai/ai-readiness-health-check/) tells you whether your organisation is ready and what to do first. An [AI opportunity discovery](/services/ai/ai-opportunity-discovery/) finds where AI belongs in your service. RedOS is the answer when the conclusion is that the whole business, not one journey, should run with AI under proper governance. We bring the service design and research; redfirst.ai brings the platform and the head-office team behind it.",
+       "Our [AI readiness health check](/services/ai/ai-readiness-health-check/) tells you whether your organisation is ready and what to do first. An [AI opportunity discovery](/services/ai/ai-opportunity-discovery/) finds where AI belongs in your service. Switch On is the answer when the conclusion is that the whole business, not one journey, should run with AI under proper governance. We bring the service design and research; redfirst.ai brings the platform and the head-office team behind it.",
        "Not sure how exposed you are? Start with redfirst.ai’s free [Red Score](https://redfirst.ai/red-score): nineteen questions, under four minutes, immediate recommendations."
       ],
       "bullets": [],
@@ -2783,8 +2978,8 @@
     "clientLogos": [],
     "quote": "",
     "quoteWho": "",
-    "ctaHeading": "Talk to us about RedOS",
-    "ctaText": "We will tell you honestly whether a Red Brief is the right next step or whether a smaller piece of work answers your question."
+    "ctaHeading": "Talk to us about Switch On",
+    "ctaText": "We will tell you honestly whether a lightbulb session is the right next step or whether a smaller piece of work answers your question."
    }
   ]
  },
@@ -3607,11 +3802,213 @@
     "title": "Robert Elding: founder and CEO of MyStoryboarder",
     "date": "2025-05-30",
     "duration": "26 min",
-    "text": "Lydia Kellett of Mishcon de Reya talks to Robert about building an AI-powered storytelling platform, twenty years of founding technology businesses, and taking MyStoryboarder into AdTech with the backing of Amazon AWS.",
+    "text": "Recorded in the Jazz FM studio: Lydia Kellett of Mishcon de Reya talks to Robert about building an AI-powered storytelling platform, twenty years of founding technology businesses, and taking MyStoryboarder into AdTech with the backing of Amazon AWS.",
     "href": "https://hellorayo.co.uk/podcasts/mishcon-innovations-series/id-2274848/",
-    "linkLabel": "Listen on Jazz FM"
+    "linkLabel": "Listen on Jazz FM",
+    "image": "/images/channel-dynamics-press-mishcon-innovation-series.jpg"
    }
+  ],
+  "nowHeading": "Now",
+  "nowItems": [
+   "Available for new engagements from November 2026, remote or on site",
+   "Building AI proofs of concept for public sector and health clients",
+   "Reseller partner for [RedOS by redfirst.ai](/services/ai/redos-ai-operating-system/)",
+   "Open to non-executive and advisory conversations"
   ]
+ },
+ "lab": {
+  "eyebrow": "Lab",
+  "title": "The Lab",
+  "intro": "Where we try things out. Products we have built, prototypes we have tested with real users, and concepts we are exploring with current AI models. Some are live, some are unfinished on purpose.",
+  "items": [
+   {
+    "status": "Live beta",
+    "title": "MyStoryboarder",
+    "text": "Our AI storyboarding product: type a beginning, middle and end, choose the number of scenes and get a professional storyboard in minutes, exportable as PDF or narrated video. Launched in beta with backing from Amazon AWS; used by teams at companies including Google, IBM and bp.",
+    "image": "/images/channel-dynamics-work-mystoryboarder.svg",
+    "href": "https://mystoryboarder.com",
+    "linkLabel": "Visit MyStoryboarder"
+   },
+   {
+    "status": "Live on this site",
+    "title": "AI readiness quick check",
+    "text": "Eight questions, an instant score and your three priorities, calculated in your browser. A taste of the full AI readiness health check and action plan.",
+    "image": "/images/channel-dynamics-blog-ai-readiness-health-check-12-questions.svg",
+    "href": "/ai-readiness-check/",
+    "linkLabel": "Try the quick check"
+   },
+   {
+    "status": "Proof of concept",
+    "title": "Compass for the NHS",
+    "text": "A proof-of-concept procurement service for the Department of Health and Social Care that helps clinicians and buyers choose medical devices from trusted evidence, with AI retrieving and summarising evidence and a human making every decision.",
+    "image": "/images/channel-dynamics-work-dhsc-compass.svg",
+    "href": "/work/dhsc-compass/",
+    "linkLabel": "Read the case study"
+   },
+   {
+    "status": "Live on this site",
+    "title": "Interactive service blueprints",
+    "text": "We are turning case studies into scrollable blueprints so you can follow a service stage by stage, front stage and back stage, and see exactly where AI sits. Start with Compass and Making Tax Digital.",
+    "image": "/images/channel-dynamics-work-hmrc-making-tax-digital.svg",
+    "href": "/work/hmrc-making-tax-digital/",
+    "linkLabel": "See a blueprint"
+   }
+  ],
+  "ctaHeading": "Got an idea you want to test?",
+  "ctaText": "We can have a working prototype in front of users within two weeks."
+ },
+ "presskit": {
+  "eyebrow": "Press kit",
+  "title": "Press kit",
+  "intro": "Everything a producer, event organiser or journalist needs: an approved photo, three lengths of biography, the logo and the key facts.",
+  "photoHeading": "Headshot",
+  "photoText": "Robert Elding, director. 800 by 800 pixels, JPEG. Free to use in connection with coverage of Robert or the company.",
+  "photo": "/images/channel-dynamics-robert-elding.jpg",
+  "photoAlt": "Robert Elding",
+  "photoFile": "/downloads/robert-elding-headshot.jpg",
+  "photoLabel": "Download headshot (JPEG)",
+  "logoHeading": "Logo",
+  "logoText": "The current logo in PNG. The brand is moving to Eldingo; updated files will appear here when they are ready.",
+  "logoFile": "/downloads/channel-dynamics-logo.png",
+  "logoLabel": "Download logo (PNG)",
+  "bioHeading": "Biographies",
+  "bioText": "Use whichever length fits. Please keep the wording.",
+  "bios": [
+   {
+    "label": "Short, 40 words",
+    "text": "Robert Elding is a service designer, UX researcher and founder with more than twenty years in digital. He leads an AI, service design and research consultancy, has worked inside six UK government departments, and founded the AI storyboarding product MyStoryboarder."
+   },
+   {
+    "label": "Medium, 90 words",
+    "text": "Robert Elding is the director of an AI, service design and research consultancy. An independent consultant since 2002, he has led service design and user research for the Ministry of Justice, the Department of Health and Social Care, HMRC, the Department for Work and Pensions and MHCLG, and for brands including Tesco, bp pulse, Shell and Lloyd’s of London. He founded the UX agency Usio, was chief marketing officer of an AI cancer-screening platform, and in 2023 launched MyStoryboarder, an AI storyboarding product backed by Amazon AWS."
+   },
+   {
+    "label": "Long, 170 words",
+    "text": "Robert Elding is a postgraduate service designer, UX researcher and founder who has worked as an independent consultant since 2002. He leads an AI, service design and research consultancy that helps organisations find out what people need, design the service around them and prove it with working prototypes. Since 2020 he has worked inside UK government on court listing for the Ministry of Justice, the Compass procurement service for the Department of Health and Social Care, programme blueprints for HMRC’s Making Tax Digital, and discoveries for the Department for Work and Pensions and MHCLG that passed GDS assessments, alongside research and design for Tesco, bp pulse, Shell and Lloyd’s of London. He founded and ran the UX agency Usio from 2013 to 2018, sold two earlier businesses, and was chief marketing officer of Lancor Scientific, an AI cancer-screening platform. In 2023 he founded MyStoryboarder, an AI storyboarding product launched in beta with the backing of Amazon AWS. He has personally run more than sixty research studies and trains teams through CPD-certified courses."
+   }
+  ],
+  "factsHeading": "Key facts",
+  "facts": [
+   {
+    "label": "Company",
+    "value": "Channel Dynamics Ltd, registered in England and Wales, no. 11077677"
+   },
+   {
+    "label": "Director",
+    "value": "Robert Elding"
+   },
+   {
+    "label": "Consulting since",
+    "value": "2002"
+   },
+   {
+    "label": "Based",
+    "value": "London and Harrogate; works UK-wide and remotely"
+   },
+   {
+    "label": "Sectors",
+    "value": "Government, healthcare, financial services, retail, energy, media"
+   },
+   {
+    "label": "Products",
+    "value": "[MyStoryboarder](https://mystoryboarder.com), AI storyboarding (beta, 2023)"
+   },
+   {
+    "label": "Press",
+    "value": "[Jazz FM, The Mishcon Innovation Series](https://hellorayo.co.uk/podcasts/mishcon-innovations-series/id-2274848/), May 2025"
+   },
+   {
+    "label": "Contact",
+    "value": "hello@channeldynamics.io"
+   }
+  ],
+  "ctaHeading": "Need something else?",
+  "ctaText": "Interview requests, speaking and podcast invitations are welcome."
+ },
+ "quickcheck": {
+  "eyebrow": "Free tool",
+  "title": "AI readiness quick check",
+  "intro": "Eight questions, four minutes, an instant score and your three priorities. It runs entirely in your browser and nothing is sent unless you choose to email us your results.",
+  "options": [
+   "Not yet",
+   "Partly",
+   "Mostly",
+   "Yes"
+  ],
+  "questions": [
+   {
+    "area": "Services",
+    "q": "Can you point to the exact moments in a customer journey where people wait, repeat themselves or give up?",
+    "hint": "From journey maps, analytics or call data, not from instinct.",
+    "action": "Map the as-is journey with evidence before choosing any tool. Our AI opportunity discovery starts here."
+   },
+   {
+    "area": "Services",
+    "q": "Do you know which of those moments are process and which need human judgement?",
+    "hint": "Process can be automated with oversight; judgement needs decision support with a person deciding.",
+    "action": "Sort each pain point into process or judgement. It decides whether AI automates, assists or stays out."
+   },
+   {
+    "area": "Data",
+    "q": "Does the data an AI feature would need exist in a system, accurately and in a form a team could use?",
+    "hint": "A field in a system, updated regularly, not a line in a strategy.",
+    "action": "Audit the data for your strongest opportunity before building anything. Most AI projects stall here."
+   },
+   {
+    "area": "Data",
+    "q": "Are you allowed to use that data for this purpose, and would a DPIA pass?",
+    "hint": "Data collected for one purpose cannot always be used for another.",
+    "action": "Confirm the lawful basis and draft the data protection impact assessment during discovery, not at the end."
+   },
+   {
+    "area": "People",
+    "q": "Is there a named owner who would run an AI service after launch, including quality review?",
+    "hint": "Prompts drift, models change and quality must be reviewed.",
+    "action": "Name an owner and a review routine for any AI feature before it goes live."
+   },
+   {
+    "area": "People",
+    "q": "Do your product, design and research teams know how to prompt, evaluate and prototype with current models?",
+    "hint": "Not data science; practical, hands-on skills.",
+    "action": "Run a one-day AI course for the team and build the first prototype together."
+   },
+   {
+    "area": "Risk",
+    "q": "Could you explain to a user, a board or a regulator what the AI does, when it is wrong and how a person takes over?",
+    "hint": "Transparency, failure paths and escalation.",
+    "action": "Design the failure path and the plain-language explanation first. Our responsible AI work covers this."
+   },
+   {
+    "area": "Technology",
+    "q": "Can you describe the smallest proof of concept that would settle whether your idea is worth building?",
+    "hint": "Usually a prototype in front of ten users, not a platform.",
+    "action": "Define a two-week proof of concept with a clear success measure and test it with real users."
+   }
+  ],
+  "bands": [
+   {
+    "min": 0,
+    "name": "Not ready yet",
+    "text": "Good news: you have found that out in four minutes rather than a year. Start with the basics below."
+   },
+   {
+    "min": 40,
+    "name": "Getting there",
+    "text": "The foundations are partly in place. Fix the gaps below and a proof of concept becomes realistic."
+   },
+   {
+    "min": 70,
+    "name": "Ready to prototype",
+    "text": "You are better prepared than most. Pick the strongest opportunity and test it with real users."
+   }
+  ],
+  "button": "Show my score",
+  "privacy": "No cookies, no tracking, nothing stored.",
+  "emailSubject": "My AI readiness quick check results",
+  "ctaHeading": "Want the full picture?",
+  "ctaText": "The AI readiness health check goes deeper across services, data, people, risk and technology and ends with a 90-day plan.",
+  "ctaLabel": "About the health check",
+  "ctaHref": "/services/ai/ai-readiness-health-check/"
  }
 }
 </script>
@@ -3666,8 +4063,8 @@ h2{font-size:clamp(1.6rem,3vw,2.3rem)}
 h3{font-size:1.25rem}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
 .narrow{max-width:820px}
-section{padding:72px 0}
-@media(max-width:700px){section{padding:52px 0}}
+section{padding:96px 0}
+@media(max-width:700px){section{padding:60px 0}}
 .eyebrow{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
 .lead{font-size:1.2rem;color:var(--slate);max-width:720px}
 .btn{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-weight:700;padding:14px 24px;border-radius:999px;text-decoration:none;transition:.2s;border:2px solid var(--red);font-size:15px}
@@ -3727,7 +4124,7 @@ section{padding:72px 0}
 .stat b{display:block;font-size:2.4rem;font-weight:800;line-height:1}
 .stat span{font-size:14px;opacity:.9;display:block;margin-top:6px}
 /* grids */
-.section-head{max-width:760px;margin-bottom:40px}
+.section-head{max-width:760px;margin-bottom:52px}
 .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
 .section-head p{color:var(--slate);margin-top:12px;font-size:1.05rem}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
@@ -3749,15 +4146,15 @@ section{padding:72px 0}
 .bg-ink .lead,.bg-ink p{color:rgba(255,255,255,.8)}
 .bg-ink h2{color:#fff}
 /* logos */
-.logo-wall{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;align-items:center}
-.logo-wall div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;place-items:center;height:92px}
-.logo-wall img{max-height:48px;width:auto;max-width:100%;filter:grayscale(1);opacity:.75;transition:.2s}
-.logo-wall div:hover img{filter:none;opacity:1}
-@media(max-width:900px){.logo-wall{grid-template-columns:repeat(3,1fr)}}
+.logo-wall{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;align-items:center}
+.logo-wall div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;display:grid;place-items:center;height:132px;transition:.2s}
+.logo-wall div:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(20,24,29,.08)}
+.logo-wall img{max-height:72px;width:auto;max-width:100%}
+@media(max-width:900px){.logo-wall{grid-template-columns:repeat(3,1fr)}.logo-wall div{height:110px}}
 @media(max-width:500px){.logo-wall{grid-template-columns:repeat(2,1fr)}}
 .logo-row{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
-.logo-row div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 22px;display:grid;place-items:center;height:84px;min-width:150px}
-.logo-row img{max-height:44px;width:auto}
+.logo-row div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 28px;display:grid;place-items:center;height:110px;min-width:180px}
+.logo-row img{max-height:64px;width:auto}
 /* testimonials */
 .quote-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:30px;display:flex;flex-direction:column;gap:18px}
 .quote-card blockquote{font-size:1.05rem;line-height:1.6;color:var(--ink)}
@@ -3801,6 +4198,8 @@ section{padding:72px 0}
 .prose img{border-radius:12px}
 /* case study layout */
 .cs-layout{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:start}
+.cs-layout>*{min-width:0}
+.bp{max-width:100%}
 @media(max-width:900px){.cs-layout{grid-template-columns:1fr}}
 .cs-aside{position:sticky;top:96px;background:var(--mist);border-radius:16px;padding:26px}
 .cs-aside h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
@@ -3861,6 +4260,59 @@ details p{padding:0 0 18px;color:var(--slate)}
 .post-hero{border-radius:16px;margin:30px 0;max-height:420px;object-fit:cover;width:100%}
 .timeline{display:grid;gap:14px}.tl-row{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}.tl-row dt{font-weight:800;color:var(--red)}.tl-row dd span{display:block;color:var(--slate);font-size:15px;margin-top:4px}@media(max-width:600px){.tl-row{grid-template-columns:1fr;gap:4px}}
 .video{margin:0}.video-poster{display:block;position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:var(--ink)}.video-poster img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:.3s}.video-poster:hover img{opacity:1;transform:scale(1.03)}.video-poster .play{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:var(--red);box-shadow:0 10px 30px rgba(0,0,0,.35)}.video-poster .play::after{content:'';position:absolute;left:30px;top:22px;border-left:26px solid #fff;border-top:16px solid transparent;border-bottom:16px solid transparent}.video iframe,.video video{width:100%;aspect-ratio:16/9;border:0;border-radius:16px;background:#000}.video figcaption{margin-top:12px;color:var(--slate);font-size:15px}.card.press .post-meta{margin:-4px 0 4px}
+/* proof strip */
+.proof{border-bottom:1px solid var(--line);padding:22px 0}
+.proof .wrap{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.proof .label{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--slate)}
+.proof ul{list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.proof li{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-weight:700;font-size:14px;background:#fff}
+/* now box */
+.now{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;margin-top:22px}
+.now h4{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.now h4::before{content:'';width:10px;height:10px;border-radius:50%;background:#22a06b;box-shadow:0 0 0 4px rgba(34,160,107,.18)}
+.now ul{list-style:none;display:grid;gap:8px;font-size:15px}
+.now li::before{content:'→ ';color:var(--red);font-weight:800}
+/* press card */
+.card.press img{aspect-ratio:1/1}
+/* blueprint */
+.bp{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;margin:34px 0}
+.bp-head{padding:18px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}
+.bp-head b{font-size:1.05rem}.bp-head span{font-size:13px;color:var(--slate)}
+.bp-scroll{overflow-x:auto;scroll-snap-type:x proximity}
+.bp-grid{display:grid;min-width:max-content}
+.bp-grid>div{padding:14px 16px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);font-size:14px;line-height:1.5;min-width:230px;max-width:260px;scroll-snap-align:start}
+.bp-grid .lane{position:sticky;left:0;background:var(--mist);font-weight:800;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate);min-width:150px;max-width:150px;z-index:1}
+.bp-grid .step{background:var(--ink);color:#fff;font-weight:800;position:sticky;top:0}
+.bp-grid .step small{display:block;color:#ff6d69;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+.bp-grid .ai{background:#fff3f2}
+.bp-grid .ai::before{content:'AI · ';color:var(--red);font-weight:800}
+.bp-grid .lane.ai-lane{background:#ffe7e5;color:var(--red-dark)}
+.bp-grid .pain{color:var(--red-dark)}
+.bp-foot{padding:12px 22px;font-size:13px;color:var(--slate);background:var(--mist)}
+/* quick check */
+.qc{max-width:820px}
+.qc .q{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:14px}
+.qc .q h3{font-size:1.05rem;margin-bottom:6px}
+.qc .q p{color:var(--slate);font-size:15px;margin-bottom:14px}
+.qc .opts{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+@media(max-width:600px){.qc .opts{grid-template-columns:repeat(2,1fr)}}
+.qc .opts label{border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center;font-size:14px;font-weight:600;cursor:pointer;background:#fff}
+.qc .opts input{display:none}
+.qc .opts input:checked+span{color:#fff}
+.qc .opts label:has(input:checked){background:var(--ink);border-color:var(--ink);color:#fff}
+.qc .result{display:none;background:var(--mist);border-radius:20px;padding:34px;margin-top:30px}
+.qc .result.show{display:block}
+.score{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-bottom:18px}
+.score .ring{width:120px;height:120px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--red) calc(var(--pct)*1%),#e3e6ea 0);position:relative}
+.score .ring::after{content:'';position:absolute;inset:10px;border-radius:50%;background:#fff}
+.score .ring b{position:relative;font-size:2rem}
+.score .band{font-size:1.4rem;font-weight:800}
+.score .band small{display:block;font-size:15px;color:var(--slate);font-weight:500;margin-top:4px}
+.result ol{margin:12px 0 22px 22px}.result li{margin-bottom:8px}
+.lab-status{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--mist);color:var(--slate)}
+.lab-status.live{background:#e4f6ec;color:#1b7a4e}
+/* motion */
+@media(prefers-reduced-motion:no-preference){.rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}.rv:nth-child(2){transition-delay:.08s}.rv:nth-child(3){transition-delay:.16s}.rv:nth-child(4){transition-delay:.24s}}
 /* contact */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
 @media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
@@ -3938,6 +4390,7 @@ ${ld}
 <main>
 ${page.body}
 </main>
+<script>(function(){if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;var els=document.querySelectorAll('main section .wrap > *, main .grid-3 > *, main .grid-4 > *, main .grid-2 > *, main .logo-wall > *, main .steps > *');els.forEach(function(e){e.classList.add('rv')});var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)});document.querySelectorAll('.stat b, .work-card .stat').forEach(function(b){var m=b.textContent.match(/^(\d+)(%?)$/);if(!m)return;var n=+m[1],t0=null;var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();function f(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/900);b.textContent=Math.round(n*(1-Math.pow(1-k,3)))+m[2];if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)});o.observe(b)});})();<\/script>
 <footer class="site-footer"><div class="wrap">
   <div class="cols">
     <div>
@@ -3985,8 +4438,57 @@ ${page.body}
   };
   const videoScript = `<script>document.addEventListener('click',function(e){var a=e.target.closest('.video-poster');if(!a)return;e.preventDefault();var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+a.dataset.yt+'?autoplay=1&rel=0';f.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';f.allowFullscreen=true;f.title='Video';a.replaceWith(f);});<\/script>`;
   const videosSection = (heading, list, cls='') => (list&&list.length) ? `<section class="${cls}"><div class="wrap"><div class="section-head"><h2>${esc(heading)}</h2></div><div class="${list.length>1?'grid-2':'narrow'}">${list.map(videoEmbed).join('')}</div></div></section>${videoScript}` : '';
-  const pressCard = (p) => `<article class="card press"><div class="body"><span class="tag">${esc(p.kind||'Press')}${p.outlet?` · ${esc(p.outlet)}`:''}</span><h3>${esc(p.title)}</h3>${p.date?`<div class="post-meta"><span>${fmtDate(p.date)}</span>${p.duration?`<span>·</span><span>${esc(p.duration)}</span>`:''}</div>`:''}<p>${esc(p.text)}</p><span class="arrow-link">${esc(p.linkLabel||'Open')}</span></div><a class="cover" href="${attr(p.href)}" target="_blank" rel="noopener" aria-label="${attr(p.title)}"></a></article>`;
+  const pressCard = (p) => `<article class="card press">${p.image?`<img src="${attr(p.image)}" alt="${attr(p.outlet||'')}" loading="lazy">`:''}<div class="body"><span class="tag">${esc(p.kind||'Press')}${p.outlet?` · ${esc(p.outlet)}`:''}</span><h3>${esc(p.title)}</h3>${p.date?`<div class="post-meta"><span>${fmtDate(p.date)}</span>${p.duration?`<span>·</span><span>${esc(p.duration)}</span>`:''}</div>`:''}<p>${esc(p.text)}</p><span class="arrow-link">${esc(p.linkLabel||'Open')}</span></div><a class="cover" href="${attr(p.href)}" target="_blank" rel="noopener" aria-label="${attr(p.title)}"></a></article>`;
   const pressSection = (heading, list, cls='') => (list&&list.length) ? `<section class="${cls}"><div class="wrap"><div class="section-head"><h2>${esc(heading)}</h2></div><div class="grid-3">${list.map(pressCard).join('')}</div></div></section>` : '';
+
+  const blueprint = (b) => {
+    if(!b || !b.steps || !b.steps.length) return '';
+    const lanes=(b.lanes||[]).filter(l=>l.key);
+    const cols=`150px repeat(${b.steps.length}, minmax(230px, 260px))`;
+    const head=`<div class="lane step" style="position:sticky;left:0;z-index:2">${esc(b.stepsLabel||'Stage')}</div>`+b.steps.map((st,i)=>`<div class="step"><small>Step ${i+1}</small>${esc(st.title)}</div>`).join('');
+    const rows=lanes.map(l=>`<div class="lane${l.key==='ai'?' ai-lane':''}">${esc(l.name)}</div>`+b.steps.map(st=>`<div class="${l.key==='ai'&&st[l.key]?'ai':''}${l.key==='pain'?' pain':''}">${inline(st[l.key]||'')}</div>`).join('')).join('');
+    return `<div class="bp"><div class="bp-head"><b>${esc(b.title||'Service blueprint')}</b><span>${esc(b.note||'Scroll sideways to follow the journey')}</span></div><div class="bp-scroll"><div class="bp-grid" style="grid-template-columns:${cols}">${head}${rows}</div></div>${b.footnote?`<div class="bp-foot">${esc(b.footnote)}</div>`:''}</div>`;
+  };
+
+  function labPage(c){
+    const Lb=c.lab;
+    const body=`${hero({title:Lb.title,text:Lb.intro,eyebrow:Lb.eyebrow,compact:true,plain:true})}
+<section><div class="wrap"><div class="grid-2">${(Lb.items||[]).map(it=>`<article class="card">${it.image?`<img src="${attr(it.image)}" alt="" loading="lazy">`:''}<div class="body"><span class="lab-status${/live/i.test(it.status)?' live':''}">${esc(it.status)}</span><h3>${esc(it.title)}</h3><p>${esc(it.text)}</p><span class="arrow-link">${esc(it.linkLabel||'Take a look')}</span></div><a class="cover" href="${attr(it.href)}" aria-label="${attr(it.title)}"${/^https?:/.test(it.href||'')?' target="_blank" rel="noopener"':''}></a></article>`).join('')}</div></div></section>
+${ctaBand(c, Lb.ctaHeading, Lb.ctaText)}`;
+    return {path:'/lab/', title:Lb.title, description:plain(Lb.intro), body};
+  }
+
+  function pressKitPage(c){
+    const K=c.presskit, S=c.site;
+    const body=`${hero({title:K.title,text:K.intro,eyebrow:K.eyebrow,compact:true,plain:true})}
+<section><div class="wrap"><div class="split">
+  <div><h2>${esc(K.photoHeading)}</h2><p style="color:var(--slate);margin:10px 0 18px">${esc(K.photoText)}</p><p><a class="btn ghost" href="${attr(K.photoFile)}" download>${esc(K.photoLabel)}</a></p>
+    <h2 style="margin-top:44px">${esc(K.logoHeading)}</h2><p style="color:var(--slate);margin:10px 0 18px">${esc(K.logoText)}</p><p><a class="btn ghost" href="${attr(K.logoFile)}" download>${esc(K.logoLabel)}</a></p></div>
+  <div>${K.photo?`<img src="${attr(K.photo)}" alt="${attr(K.photoAlt||'')}" loading="lazy" style="border-radius:20px">`:''}</div>
+</div></div></section>
+<section class="bg-mist"><div class="wrap narrow"><div class="section-head"><h2>${esc(K.bioHeading)}</h2><p>${esc(K.bioText)}</p></div>
+${(K.bios||[]).map(b=>`<div class="card" style="margin-bottom:16px"><div class="body"><span class="tag">${esc(b.label)}</span><p style="color:var(--ink)">${esc(b.text)}</p></div></div>`).join('')}
+</div></section>
+<section><div class="wrap narrow"><div class="section-head"><h2>${esc(K.factsHeading)}</h2></div><dl class="timeline">${(K.facts||[]).map(f=>`<div class="tl-row"><dt>${esc(f.label)}</dt><dd>${inline(f.value)}</dd></div>`).join('')}</dl></div></section>
+${ctaBand(c, K.ctaHeading, K.ctaText)}`;
+    return {path:'/press-kit/', title:K.title, description:plain(K.intro), body};
+  }
+
+  function quickCheckPage(c){
+    const Q=c.quickcheck, S=c.site;
+    const qs=Q.questions||[];
+    const qHtml=qs.map((q,i)=>`<div class="q"><h3>${i+1}. ${esc(q.q)}</h3>${q.hint?`<p>${esc(q.hint)}</p>`:''}<div class="opts">${(Q.options||[]).map((o,n)=>`<label><input type="radio" name="q${i}" value="${n}" required><span>${esc(o)}</span></label>`).join('')}</div></div>`).join('');
+    const data=JSON.stringify({questions:qs.map(q=>({area:q.area,action:q.action})),options:(Q.options||[]).length,bands:Q.bands||[],email:S.email,subject:Q.emailSubject||'My AI readiness quick check'}).replace(/<\//g,'<\\/');
+    const body=`${hero({title:Q.title,text:Q.intro,eyebrow:Q.eyebrow,compact:true,plain:true})}
+<section style="padding-top:30px"><div class="wrap"><form class="qc" id="qc" onsubmit="return cdScore(this)">
+${qHtml}
+<p style="margin:22px 0"><button class="btn" type="submit">${esc(Q.button||'Show my score')}</button> <span style="color:var(--slate);font-size:14px;margin-left:10px">${esc(Q.privacy||'')}</span></p>
+<div class="result" id="qcResult"></div>
+</form></div></section>
+<script>var CDQ=${data};function cdScore(f){var d=new FormData(f),tot=0,max=(CDQ.options-1)*CDQ.questions.length,low=[];CDQ.questions.forEach(function(q,i){var v=+d.get('q'+i);tot+=v;low.push({v:v,a:q.action,area:q.area})});var pct=Math.round(tot/max*100);var band=CDQ.bands.filter(function(b){return pct>=b.min}).sort(function(a,b){return b.min-a.min})[0]||CDQ.bands[0];low.sort(function(a,b){return a.v-b.v});var acts=low.slice(0,3);var r=document.getElementById('qcResult');var txt='AI readiness quick check: '+pct+'/100 ('+band.name+')\\n\\nPriorities:\\n'+acts.map(function(a,i){return (i+1)+'. '+a.area+': '+a.a}).join('\\n');r.innerHTML='<div class="score"><div class="ring" style="--pct:'+pct+'"><b>'+pct+'</b></div><div class="band">'+band.name+'<small>'+band.text+'</small></div></div><h3>Your three priorities</h3><ol>'+acts.map(function(a){return '<li><b>'+a.area+'.</b> '+a.a+'</li>'}).join('')+'</ol><p><a class="btn" href="mailto:'+CDQ.email+'?subject='+encodeURIComponent(CDQ.subject)+'&body='+encodeURIComponent(txt+'\\n\\nPlease get in touch to discuss a free 30-minute review.')+'">Send my results for a free 30-minute review</a> <button type="button" class="btn ghost" onclick="navigator.clipboard&&navigator.clipboard.writeText(this.dataset.t);this.textContent=\\'Copied\\'" data-t="'+txt.replace(/"/g,'&quot;')+'">Copy results</button></p><p style="font-size:14px;color:var(--slate);margin-top:14px">Nothing is stored or sent until you choose to email it.</p>';r.classList.add('show');r.scrollIntoView({behavior:'smooth',block:'start'});return false;}<\/script>
+${ctaBand(c, Q.ctaHeading, Q.ctaText, Q.ctaLabel, Q.ctaHref)}`;
+    return {path:'/ai-readiness-check/', title:Q.title, description:plain(Q.intro), body};
+  }
 
   /* ---------- pages ---------- */
   function homePage(c){
@@ -3995,12 +4497,13 @@ ${page.body}
     const posts=[...c.blog.posts].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,H.blogCount||4);
     const body = `
 ${hero({...H.hero})}
+${H.proof&&H.proof.length?`<div class="proof"><div class="wrap"><span class="label">${esc(H.proofLabel||'Recent work with')}</span><ul>${lines(H.proof).map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div></div>`:''}
 ${H.stats&&H.stats.length?`<div class="stats"><div class="wrap"><div class="grid">${H.stats.map(s=>`<div class="stat"><b>${esc(s.value)}</b><span>${esc(s.label)}</span></div>`).join('')}</div></div></div>`:''}
 <section><div class="wrap">
   <div class="section-head"><div class="eyebrow">${esc(H.audiencesEyebrow)}</div><h2>${esc(H.audiencesHeading)}</h2>${H.audiencesText?`<p>${esc(H.audiencesText)}</p>`:''}</div>
   <div class="grid-3">${H.audiences.map(a=>`<article class="card"><img src="${attr(a.image)}" alt="" loading="lazy"><div class="body"><span class="tag">${esc(a.title)}</span><h3>${esc(a.text)}</h3><span class="arrow-link">${esc(a.linkLabel||'Learn more')}</span></div><a class="cover" href="${attr(a.href)}" aria-label="${attr(a.title)}"></a></article>`).join('')}</div>
 </div></section>
-${H.pillarsHeading?`<section class="bg-ink"><div class="wrap"><div class="section-head"><div class="eyebrow" style="color:#ff6d69">${esc(H.pillarsEyebrow)}</div><h2>${esc(H.pillarsHeading)}</h2>${H.pillarsText?`<p>${esc(H.pillarsText)}</p>`:''}</div><div class="grid-4">${c.services.pillars.map(p=>`<article class="card" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)"><div class="body"><img src="${attr(p.icon)}" alt="" style="width:48px;height:48px;object-fit:contain;aspect-ratio:auto;filter:brightness(0) invert(1)" loading="lazy"><h3 style="color:#fff">${esc(p.name)}</h3><p>${esc(p.text)}</p><span class="arrow-link" style="color:#ff6d69">Explore</span></div><a class="cover" href="/services/${attr(p.slug)}/" aria-label="${attr(p.name)}"></a></article>`).join('')}</div></div></section>`:''}
+${H.pillarsHeading?`<section class="bg-ink"><div class="wrap"><div class="section-head"><div class="eyebrow" style="color:#ff6d69">${esc(H.pillarsEyebrow)}</div><h2>${esc(H.pillarsHeading)}</h2>${H.pillarsText?`<p>${inline(H.pillarsText)}</p>`:''}</div><div class="grid-4">${c.services.pillars.map(p=>`<article class="card" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)"><div class="body"><img src="${attr(p.icon)}" alt="" style="width:48px;height:48px;object-fit:contain;aspect-ratio:auto;filter:brightness(0) invert(1)" loading="lazy"><h3 style="color:#fff">${esc(p.name)}</h3><p>${esc(p.text)}</p><span class="arrow-link" style="color:#ff6d69">Explore</span></div><a class="cover" href="/services/${attr(p.slug)}/" aria-label="${attr(p.name)}"></a></article>`).join('')}</div></div></section>`:''}
 <section class="bg-mist"><div class="wrap">
   <div class="section-head center"><div class="eyebrow">${esc(H.clientsEyebrow)}</div><h2>${esc(H.clientsHeading)}</h2>${H.clientsText?`<p>${esc(H.clientsText)}</p>`:''}</div>
   ${logoWall(c.clients)}
@@ -4046,6 +4549,7 @@ ${ctaBand(c, W.ctaHeading, W.ctaText)}`;
       ${sec(1,'The client',cs.clientParas)}
       ${sec(2,'The challenge',cs.challengeParas,null,objectives)}
       ${sec(3,'Our approach',cs.approachParas,cs.approachImages)}
+      ${blueprint(cs.blueprint)}
       ${pullQuote(cs.quote, cs.quoteWho)}
       ${sec(4,'The results',cs.resultParas,cs.resultImages)}
     </div>
@@ -4119,7 +4623,7 @@ ${ctaBand(c, s.ctaHeading||S.ctaHeading, s.ctaText||S.ctaText)}`;
     const body=`${hero({title:L.title,text:L.intro,eyebrow:L.eyebrow,compact:true,plain:true,ctaLabel:L.ctaLabel,ctaHref:L.ctaHref})}
 <section><div class="wrap"><div class="split">
   <div class="prose">${paras(L.bioParas)}${L.linkedin?`<p><a class="arrow-link" href="${attr(L.linkedin)}" target="_blank" rel="noopener">Robert on LinkedIn</a></p>`:''}</div>
-  <div>${L.photo?`<img src="${attr(L.photo)}" alt="${attr(L.name||L.title)}" loading="lazy">`:`<div class="cs-aside" style="position:static"><h4>${esc(L.boardHeading)}</h4><p>${esc(L.boardText)}</p><p style="margin-top:18px"><a class="btn" href="${attr(L.ctaHref)}">${esc(L.ctaLabel)}</a></p></div>`}</div>
+  <div>${L.photo?`<img src="${attr(L.photo)}" alt="${attr(L.name||L.title)}" loading="lazy" style="border-radius:20px">${L.nowHeading?`<div class="now"><h4>${esc(L.nowHeading)}</h4><ul>${lines(L.nowItems).map(x=>`<li>${inline(x)}</li>`).join('')}</ul></div>`:''}`:`<div class="cs-aside" style="position:static"><h4>${esc(L.boardHeading)}</h4><p>${esc(L.boardText)}</p><p style="margin-top:18px"><a class="btn" href="${attr(L.ctaHref)}">${esc(L.ctaLabel)}</a></p></div>`}</div>
 </div></div></section>
 <section class="bg-mist"><div class="wrap"><div class="section-head"><h2>${esc(L.highlightsHeading)}</h2></div><div class="grid-3">${(L.highlights||[]).map(h=>`<div class="card"><div class="body"><h3>${esc(h.title)}</h3><p>${esc(h.text)}</p></div></div>`).join('')}</div></div></section>
 <section><div class="wrap"><div class="section-head"><h2>${esc(L.timelineHeading)}</h2></div><div class="prose" style="max-width:860px"><dl class="timeline">${(L.timeline||[]).map(t=>`<div class="tl-row"><dt>${esc(t.years)}</dt><dd><b>${esc(t.role)}</b> · ${esc(t.org)}${t.text?`<span>${esc(t.text)}</span>`:''}</dd></div>`).join('')}</dl></div></div></section>
@@ -4231,7 +4735,7 @@ ${ctaBand(c, c.blog.ctaHeading, c.blog.ctaText)}`;
     pages.push(servicesIndex(c));
     c.services.pillars.forEach(p=>pages.push(pillarPage(c,p)));
     c.services.pages.forEach(s=>pages.push(servicePage(c,s)));
-    pages.push(trainingPage(c), aboutPage(c), leadershipPage(c), resourcesPage(c), blogIndex(c));
+    pages.push(trainingPage(c), aboutPage(c), leadershipPage(c), resourcesPage(c), labPage(c), pressKitPage(c), quickCheckPage(c), blogIndex(c));
     c.blog.posts.forEach(p=>pages.push(postPage(c,p)));
     pages.push(contactPage(c), termsPage(c), notFound(c));
     return pages;
@@ -4298,7 +4802,7 @@ const SCHEMAS = {
     list('stats','Results strip',[txt('value','Value'),txt('label','Label')],'value'),
     txt('audiencesEyebrow','Audiences eyebrow'),txt('audiencesHeading','Audiences heading'),area('audiencesText','Audiences text'),
     list('audiences','Audience cards',[txt('title','Who'),area('text','Promise'),img('image','Image'),txt('href','Link'),txt('linkLabel','Link label')],'title'),
-    txt('pillarsEyebrow','Pillars eyebrow'),txt('pillarsHeading','Pillars heading (blank hides the band)'),area('pillarsText','Pillars text'),
+    txt('proofLabel','Proof strip label'),linesF('proof','Proof strip names'),txt('pillarsEyebrow','Pillars eyebrow'),txt('pillarsHeading','Pillars heading (blank hides the band)'),area('pillarsText','Pillars text'),
     txt('clientsEyebrow','Clients eyebrow'),txt('clientsHeading','Clients heading'),area('clientsText','Clients text'),
     txt('workEyebrow','Work eyebrow'),txt('workHeading','Work heading'),area('workText','Work text'),linesF('featuredWork','Featured case studies (slugs)','One slug per line, e.g. post-office'),
     txt('testimonialsEyebrow','Testimonials eyebrow'),txt('testimonialsHeading','Testimonials heading'),
@@ -4309,7 +4813,7 @@ const SCHEMAS = {
   work: {title:'Work / case studies', hint:'Each case study becomes /work/<slug>/.', fields:[
     txt('eyebrow','Eyebrow'),txt('title','Page title'),area('intro','Intro'),img('heroImage','Hero image'),txt('ctaHeading','CTA heading'),area('ctaText','CTA text'),
     list('groups','Groups',[txt('key','Key'),txt('heading','Heading'),area('text','Text')],'heading'),
-    list('caseStudies','Case studies',[txt('slug','Slug (URL)'),txt('group','Group key'),txt('client','Client'),txt('headline','Headline'),txt('stat','Headline stat (e.g. 47%)'),txt('statLabel','Stat label'),area('summary','Summary (hero text)'),img('thumb','Card image'),img('heroImage','Hero image'),img('logo','Client logo'),linesF('services','What we did'),parasF('clientParas','The client'),parasF('challengeParas','The challenge'),linesF('objectives','Objectives'),parasF('approachParas','Our approach'),linesF('approachImages','Approach images (paths)'),area('quote','Quote'),txt('quoteWho','Quote attribution'),parasF('resultParas','The results'),linesF('resultImages','Result images (paths)')],'client')
+    list('caseStudies','Case studies',[txt('slug','Slug (URL)'),txt('group','Group key'),txt('client','Client'),txt('headline','Headline'),txt('stat','Headline stat (e.g. 47%)'),txt('statLabel','Stat label'),area('summary','Summary (hero text)'),img('thumb','Card image'),img('heroImage','Hero image'),img('logo','Client logo'),linesF('services','What we did'),{key:'blueprint',label:'Interactive blueprint',type:'object',fields:[txt('title','Title'),txt('note','Note'),txt('stepsLabel','Steps label'),list('lanes','Lanes',[txt('key','Key (user, front, back, data, ai, pain)'),txt('name','Lane name')],'name'),list('steps','Steps',[txt('title','Step title'),area('user','User'),area('front','Front stage'),area('back','Back stage'),area('data','Data & systems'),area('ai','AI touchpoint'),area('pain','Pain point')],'title'),txt('footnote','Footnote')]},parasF('clientParas','The client'),parasF('challengeParas','The challenge'),linesF('objectives','Objectives'),parasF('approachParas','Our approach'),linesF('approachImages','Approach images (paths)'),area('quote','Quote'),txt('quoteWho','Quote attribution'),parasF('resultParas','The results'),linesF('resultImages','Result images (paths)')],'client')
   ]},
   services: {title:'Services', hint:'Pillars group the detail pages. A page with no parent lives at /services/<slug>/.', fields:[
     txt('eyebrow','Eyebrow'),txt('title','Title'),area('intro','Intro'),img('heroImage','Hero image'),txt('clientsHeading','Clients heading'),txt('ctaHeading','CTA heading'),area('ctaText','CTA text'),
@@ -4317,16 +4821,19 @@ const SCHEMAS = {
     txt('extrasHeading','More services heading'),list('extras','More services cards',[txt('name','Name'),area('text','Text'),txt('href','Link')],'name'),
     list('pages','Service pages',[txt('slug','Slug'),txt('parent','Parent pillar slug (blank = top level)'),txt('name','Short name'),txt('title','Page title'),img('heroImage','Hero image'),parasF('intro','Intro paragraphs'),list('sections','Sections',[txt('heading','Heading'),parasF('paras','Paragraphs'),linesF('bullets','Bullet points'),linesF('images','Images (paths)')],'heading'),txt('clientsHeading','Client logos heading'),linesF('clientLogos','Client logos (paths)'),area('quote','Quote'),txt('quoteWho','Quote attribution'),txt('ctaHeading','CTA heading'),area('ctaText','CTA text')],'title')
   ]},
-  leadership: {title:'Leadership (Director)', hint:'/about/leadership/ — profile of the director for clients, boards and NED searches.', fields:[txt('eyebrow','Eyebrow'),txt('title','Title'),txt('name','Full name'),txt('jobTitle','Job title'),area('intro','Intro'),img('photo','Photo'),parasF('bioParas','Biography'),txt('linkedin','LinkedIn URL'),txt('highlightsHeading','Highlights heading'),list('highlights','Highlights',[txt('title','Title'),area('text','Text')],'title'),txt('timelineHeading','Timeline heading'),list('timeline','Timeline',[txt('years','Years'),txt('role','Role'),txt('org','Organisation'),area('text','Text')],'org'),txt('videosHeading','Videos heading'),list('videos','Videos',[txt('title','Title'),txt('youtubeId','YouTube video ID (11 chars)'),txt('url','Or video URL (.mp4 in /downloads/ or a YouTube link)'),img('poster','Poster image (mp4 only)'),txt('caption','Caption')],'title'),txt('pressHeading','Press heading'),list('press','Press & media',[txt('kind','Kind (Podcast, Article, Video)'),txt('outlet','Outlet'),txt('title','Title'),txt('date','Date (YYYY-MM-DD)'),txt('duration','Duration'),area('text','Summary'),txt('href','Link'),txt('linkLabel','Link label')],'title'),txt('interestsHeading','Interests heading'),linesF('interests','Board interests'),txt('boardHeading','Board box heading'),area('boardText','Board box text'),txt('ctaLabel','Button label'),txt('ctaHref','Button link'),txt('ctaHeading','CTA heading'),area('ctaText','CTA text')]},
+  leadership: {title:'Leadership (Director)', hint:'/about/leadership/ — profile of the director for clients, boards and NED searches.', fields:[txt('eyebrow','Eyebrow'),txt('title','Title'),txt('name','Full name'),txt('jobTitle','Job title'),area('intro','Intro'),img('photo','Photo'),txt('nowHeading','Now box heading'),linesF('nowItems','Now box items'),parasF('bioParas','Biography'),txt('linkedin','LinkedIn URL'),txt('highlightsHeading','Highlights heading'),list('highlights','Highlights',[txt('title','Title'),area('text','Text')],'title'),txt('timelineHeading','Timeline heading'),list('timeline','Timeline',[txt('years','Years'),txt('role','Role'),txt('org','Organisation'),area('text','Text')],'org'),txt('videosHeading','Videos heading'),list('videos','Videos',[txt('title','Title'),txt('youtubeId','YouTube video ID (11 chars)'),txt('url','Or video URL (.mp4 in /downloads/ or a YouTube link)'),img('poster','Poster image (mp4 only)'),txt('caption','Caption')],'title'),txt('pressHeading','Press heading'),list('press','Press & media',[txt('kind','Kind (Podcast, Article, Video)'),txt('outlet','Outlet'),img('image','Image'),txt('title','Title'),txt('date','Date (YYYY-MM-DD)'),txt('duration','Duration'),area('text','Summary'),txt('href','Link'),txt('linkLabel','Link label')],'title'),txt('interestsHeading','Interests heading'),linesF('interests','Board interests'),txt('boardHeading','Board box heading'),area('boardText','Board box text'),txt('ctaLabel','Button label'),txt('ctaHref','Button link'),txt('ctaHeading','CTA heading'),area('ctaText','CTA text')]},
   training: {title:'Training', hint:'/training/', fields:[txt('eyebrow','Eyebrow'),txt('title','Title'),area('intro','Intro'),img('heroImage','Hero image'),txt('ctaLabel','Button'),txt('ctaHref','Button link'),txt('coursesHeading','Courses heading'),area('coursesText','Courses text'),list('courses','Courses',[txt('name','Name'),txt('price','Price'),area('text','Text'),img('image','Image')],'name'),txt('clientsHeading','Clients heading'),linesF('clientLogos','Client logos (paths)'),txt('testimonialsHeading','Testimonials heading'),list('testimonials','Testimonials',[area('quote','Quote'),txt('who','Who')],'who'),txt('faqHeading','FAQ heading'),list('faqs','FAQs',[txt('q','Question'),area('a','Answer')],'q'),txt('ctaHeading','CTA heading'),area('ctaText','CTA text')]},
   about: {title:'About', hint:'/about/', fields:[txt('eyebrow','Eyebrow'),txt('title','Title'),area('intro','Intro'),img('heroImage','Hero image'),list('sections','Sections',[txt('heading','Heading'),parasF('paras','Paragraphs'),img('image','Image'),txt('linkLabel','Link label'),txt('linkHref','Link')],'heading'),txt('videosHeading','Videos heading'),list('videos','Videos',[txt('title','Title'),txt('youtubeId','YouTube video ID'),txt('url','Or video URL'),img('poster','Poster (mp4 only)'),txt('caption','Caption')],'title'),area('quote','Quote'),txt('quoteWho','Quote attribution'),txt('clientsHeading','Clients heading'),txt('ctaHeading','CTA heading'),area('ctaText','CTA text')]},
+  lab: {title:'Lab', hint:'/lab/ — experiments, prototypes and products.', fields:[txt('eyebrow','Eyebrow'),txt('title','Title'),area('intro','Intro'),list('items','Experiments',[txt('status','Status (Live beta, Prototype, Concept, Live on this site)'),txt('title','Title'),area('text','Text'),img('image','Image'),txt('href','Link'),txt('linkLabel','Link label')],'title'),txt('ctaHeading','CTA heading'),area('ctaText','CTA text')]},
+  presskit: {title:'Press kit', hint:'/press-kit/ — headshot, bios, logo, facts.', fields:[txt('eyebrow','Eyebrow'),txt('title','Title'),area('intro','Intro'),txt('photoHeading','Photo heading'),area('photoText','Photo text'),img('photo','Photo (display)'),txt('photoAlt','Photo alt'),txt('photoFile','Photo download path'),txt('photoLabel','Photo button'),txt('logoHeading','Logo heading'),area('logoText','Logo text'),txt('logoFile','Logo download path'),txt('logoLabel','Logo button'),txt('bioHeading','Bios heading'),area('bioText','Bios text'),list('bios','Bios',[txt('label','Label'),area('text','Text')],'label'),txt('factsHeading','Facts heading'),list('facts','Facts',[txt('label','Label'),txt('value','Value')],'label'),txt('ctaHeading','CTA heading'),area('ctaText','CTA text')]},
+  quickcheck: {title:'AI readiness quick check', hint:'/ai-readiness-check/ — interactive scorer, runs entirely in the browser.', fields:[txt('eyebrow','Eyebrow'),txt('title','Title'),area('intro','Intro'),linesF('options','Answer options (lowest to highest)'),list('questions','Questions',[txt('area','Area'),area('q','Question'),area('hint','Hint'),area('action','Action shown when this scores low')],'q'),list('bands','Score bands',[{key:'min',label:'Minimum score',type:'number'},txt('name','Name'),area('text','Text')],'name'),txt('button','Button label'),txt('privacy','Privacy note'),txt('emailSubject','Email subject'),txt('ctaHeading','CTA heading'),area('ctaText','CTA text'),txt('ctaLabel','CTA button'),txt('ctaHref','CTA link')]},
   resources: {title:'Resources', hint:'Free downloads. Put files in site/downloads/.', fields:[txt('eyebrow','Eyebrow'),txt('title','Title'),area('intro','Intro'),list('items','Downloads',[txt('title','Title'),area('text','Text'),img('image','Preview image'),txt('file','File path (e.g. /downloads/x.pdf)'),txt('label','Button label')],'title'),txt('ctaHeading','CTA heading'),area('ctaText','CTA text')]},
   blog: {title:'Blog', hint:'Posts use simple markdown: ## heading, - bullets, ![alt](/images/x.jpg), > quote.', fields:[txt('eyebrow','Eyebrow'),txt('title','Title'),area('intro','Intro'),img('heroImage','Hero image'),txt('ctaHeading','CTA heading'),area('ctaText','CTA text'),list('posts','Posts',[txt('slug','Slug (URL)'),txt('title','Title'),txt('date','Date (YYYY-MM-DD)'),txt('author','Author'),img('hero','Hero image'),area('excerpt','Excerpt'),{key:'body',label:'Body (markdown)',type:'textarea',tall:true}],'title')]},
   contact: {title:'Contact', hint:'Email, phone and address come from Site settings.', fields:[txt('eyebrow','Eyebrow'),txt('title','Title'),area('intro','Intro'),txt('detailsHeading','Details heading'),txt('hours','Office hours'),area('note','Note'),img('image','Image'),txt('formHeading','Form heading'),txt('formButton','Form button'),txt('formSubject','Email subject'),area('formNote','Form note')]},
   terms: {title:'Terms', hint:'/terms/ — markdown.', fields:[txt('title','Title'),{key:'body',label:'Body (markdown)',type:'textarea',tall:true}]}
 };
-const SIDEBAR=[['Site',['site','theme','nav','footer','seo','clients']],['Pages',['home','work','services','training','about','leadership','resources','blog','contact','terms']]];
-const PREVIEW_FOR={home:'/',work:'/work/',services:'/services/',leadership:'/about/leadership/',training:'/training/',about:'/about/',resources:'/resources/',blog:'/blog/',contact:'/contact/',terms:'/terms/'};
+const SIDEBAR=[['Site',['site','theme','nav','footer','seo','clients']],['Pages',['home','work','services','training','about','leadership','lab','presskit','quickcheck','resources','blog','contact','terms']]];
+const PREVIEW_FOR={home:'/',work:'/work/',services:'/services/',leadership:'/about/leadership/',lab:'/lab/',presskit:'/press-kit/',quickcheck:'/ai-readiness-check/',training:'/training/',about:'/about/',resources:'/resources/',blog:'/blog/',contact:'/contact/',terms:'/terms/'};
 
 function renderSidebar(){
   $('sidebar').innerHTML = SIDEBAR.map(([g,items])=>`<div class="side-group">${g}</div>`+items.map(k=>`<button class="side-item${k===activeSection?' active':''}" onclick="selectSection('${k}')">${SCHEMAS[k].title}</button>`).join('')).join('');

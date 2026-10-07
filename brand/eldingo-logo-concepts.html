@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eldingo! logo concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Fraunces:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<style>
+  :root{--red:#E4130E;--ink:#14181D;--spark:#FFC83D;--mist:#F4F5F7;--slate:#525B68}
+  body{margin:0;font-family:Manrope,system-ui,sans-serif;background:#fff;color:var(--ink);padding:40px 20px;max-width:1100px;margin:0 auto}
+  h1{font-size:28px;margin:0 0 6px}p.lead{color:var(--slate);margin:0 0 36px}
+  .concept{border:1px solid #E3E6EA;border-radius:20px;padding:36px;margin-bottom:28px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+  @media(max-width:760px){.concept{grid-template-columns:1fr}}
+  .concept h2{font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin:0 0 10px}
+  .concept p{color:var(--slate);line-height:1.6;margin:0 0 10px;font-size:15px}
+  .stage{background:var(--mist);border-radius:16px;padding:40px 24px;display:grid;place-items:center;min-height:200px}
+  .stage.dark{background:var(--ink)}
+  .wordmark{font-family:Manrope;font-weight:800;font-size:64px;letter-spacing:-.03em;display:inline-flex;align-items:baseline;gap:2px;color:var(--ink)}
+  .dark .wordmark{color:#fff}
+  .hint{font-size:13px;color:var(--slate);margin-top:14px}
+  /* A: bulb as the dot of the ! */
+  .bang{position:relative;display:inline-block;width:.42em;height:1em}
+  .bang .stroke{position:absolute;left:50%;top:.08em;width:.16em;height:.52em;background:var(--red);border-radius:.08em;transform:translateX(-50%)}
+  .bang .bulb{position:absolute;left:50%;bottom:-.04em;width:.3em;height:.3em;border-radius:50%;background:#D9DCE1;transform:translateX(-50%);transition:.3s}
+  .bang .rays{position:absolute;left:50%;bottom:.11em;width:.3em;height:.3em;transform:translateX(-50%);opacity:0}
+  .bang .rays i{position:absolute;left:50%;top:50%;width:.05em;height:.14em;background:var(--spark);border-radius:.04em;transform-origin:50% -.22em;margin:-.07em 0 0 -.025em}
+  .on .bulb,.wordmark:hover .bulb{background:var(--spark);box-shadow:0 0 0 .05em rgba(255,200,61,.35),0 0 .5em rgba(255,200,61,.8)}
+  .on .rays,.wordmark:hover .rays{opacity:1;animation:spin 1.6s linear infinite}
+  @keyframes spin{to{transform:translateX(-50%) rotate(360deg)}}
+  @keyframes flick{0%,100%{opacity:1}45%{opacity:.4}50%{opacity:1}55%{opacity:.6}}
+  .auto .bulb{animation:lighton 2.4s ease-in-out infinite}
+  @keyframes lighton{0%,30%{background:#D9DCE1;box-shadow:none}45%{background:var(--spark);box-shadow:0 0 .5em rgba(255,200,61,.9)}50%{background:#D9DCE1}55%,100%{background:var(--spark);box-shadow:0 0 0 .05em rgba(255,200,61,.35),0 0 .5em rgba(255,200,61,.8)}}
+  /* B: bolt as the i's dot (continuity with current logo) */
+  .i-bolt{position:relative;display:inline-block}
+  .i-bolt svg{position:absolute;left:50%;top:-.22em;width:.42em;height:.42em;transform:translateX(-50%) rotate(12deg)}
+  .i-bolt:hover svg,.strike svg{animation:strike .5s ease-out}
+  @keyframes strike{0%{transform:translateX(-50%) rotate(12deg) scale(1)}30%{transform:translateX(-50%) rotate(12deg) scale(1.35);filter:drop-shadow(0 0 .2em #FFC83D)}100%{transform:translateX(-50%) rotate(12deg) scale(1)}}
+  /* C: bell / "ding" mark */
+  .ding svg{width:1.05em;height:1.05em;vertical-align:-.12em;margin-right:.06em;transform-origin:50% 10%}
+  .wordmark:hover .ding svg,.ring .ding svg{animation:ring .9s ease-in-out}
+  @keyframes ring{0%,100%{transform:rotate(0)}20%{transform:rotate(-14deg)}40%{transform:rotate(12deg)}60%{transform:rotate(-8deg)}80%{transform:rotate(5deg)}}
+  .serif{font-family:Fraunces,serif;font-style:italic;font-weight:700;letter-spacing:-.01em}
+  .palette{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+  .sw{width:56px;height:56px;border-radius:12px;border:1px solid #E3E6EA;display:grid;place-items:end;padding:6px;font-size:10px;font-weight:700;color:#fff}
+</style>
+</head>
+<body>
+<h1>Eldingo! logo concepts</h1>
+<p class="lead">Three directions on the "Eureka!" idea. Hover each wordmark to trigger the animation. Nothing here is final; it is to choose a direction.</p>
+
+<div class="concept">
+  <div>
+    <h2>A · The lightbulb moment</h2>
+    <p>The exclamation mark <em>is</em> the idea: a bulb that switches on. On the website the bulb lights when the page loads and flickers on hover; in the header it stays lit. It gives you a "spark" yellow as a second brand colour next to the red, and a motif you can reuse: the Lightbulb session, bullet points as small bulbs, a lit bulb for live Lab projects.</p>
+    <p>Why it works: it says "ideas" without saying "consultancy", it animates naturally, and the bulb reads at favicon size.</p>
+    <div class="palette"><div class="sw" style="background:#E4130E">Red</div><div class="sw" style="background:#FFC83D;color:#14181D">Spark</div><div class="sw" style="background:#14181D">Ink</div><div class="sw" style="background:#F4F5F7;color:#14181D">Mist</div></div>
+  </div>
+  <div class="stage"><span class="wordmark auto on">Eldingo<span class="bang"><span class="stroke"></span><span class="rays"><i style="transform:rotate(0deg)"></i><i style="transform:rotate(60deg)"></i><i style="transform:rotate(120deg)"></i><i style="transform:rotate(180deg)"></i><i style="transform:rotate(240deg)"></i><i style="transform:rotate(300deg)"></i></span><span class="bulb"></span></span></span><div class="hint">Loads grey, flickers, lights up. Rays spin on hover.</div></div>
+</div>
+
+<div class="concept">
+  <div>
+    <h2>B · The bolt, carried over</h2>
+    <p>Keeps the lightning bolt from the Channel Dynamics roundel so existing clients still recognise you, but moves it to the dot of the "i". On hover or page load the bolt strikes: a quick scale and flash. Red stays the single accent; no new colour needed.</p>
+    <p>Why it works: continuity, and the bolt already says energy and speed, which suits rapid prototyping. Less obviously "Eureka" than A.</p>
+  </div>
+  <div class="stage"><span class="wordmark strike">Eld<span class="i-bolt">ı<svg viewBox="0 0 24 24" fill="#E4130E"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>ngo!</span><div class="hint">Bolt strikes on hover.</div></div>
+</div>
+
+<div class="concept">
+  <div>
+    <h2>C · Ding! The bell</h2>
+    <p>Eldingo contains "ding", so the mark is a bell that rings. Set in a warm italic serif to feel human and a little playful, with the bell in red. The bell swings on hover and gives a short "ding" sound option for the Lab or the quick-check result.</p>
+    <p>Why it works: the most fun of the three and very memorable. The risk is reading as a notification app rather than a consultancy, so the typography has to do the serious work.</p>
+  </div>
+  <div class="stage"><span class="wordmark serif ring"><span class="ding"><svg viewBox="0 0 24 24" fill="none" stroke="#E4130E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 16V11a6 6 0 0 0-12 0v5l-2 2h16l-2-2z"/><path d="M10 20a2 2 0 0 0 4 0"/><path d="M12 3v2"/></svg></span>Eldingo!</span><div class="hint">Bell swings on hover.</div></div>
+</div>
+
+<div class="concept">
+  <div>
+    <h2>How the brand could develop</h2>
+    <p><b>Voice.</b> Short sentences, plain English, a little dry humour. The "!" is the only exclamation mark on the site; the copy never shouts.</p>
+    <p><b>Colour.</b> White space first. Red for action, spark yellow for ideas and live things, ink for headlines. Never dark backgrounds for whole pages.</p>
+    <p><b>Motion.</b> One signature move, the bulb lighting, used sparingly: logo on load, the result of the quick check, a case study's "result" stat. Everything else is gentle reveals.</p>
+    <p><b>Illustration.</b> Simple line drawings on a grid (bulbs, post-its, journey arrows) to replace stock photos, in red and spark on white.</p>
+    <p><b>Tagline options.</b> "Ideas, tested." · "Research. Design. Switch on." · "The moment it makes sense."</p>
+  </div>
+  <div class="stage dark"><span class="wordmark auto on">Eldingo<span class="bang"><span class="stroke"></span><span class="rays"><i style="transform:rotate(0deg)"></i><i style="transform:rotate(60deg)"></i><i style="transform:rotate(120deg)"></i><i style="transform:rotate(180deg)"></i><i style="transform:rotate(240deg)"></i><i style="transform:rotate(300deg)"></i></span><span class="bulb"></span></span></span><div class="hint" style="color:#9aa3ad">Concept A on ink, for the footer and social cards only.</div></div>
+</div>
+</body>
+</html>

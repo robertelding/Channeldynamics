@@ -29,6 +29,11 @@ the rename is a Site-settings change plus a find/replace. Positioning: AI, servi
 and future concept design. Predictable Selling Systems and Traffic pages were removed. Voice is "we".
 Recent-work case studies (2020–26) come from Robert's CV; they state what the client reported and invent no metrics.
 Robert resells **RedOS by redfirst.ai** (page under the AI pillar); keep its description consistent with redfirst.ai.
+Design rules from Robert (Oct 2026): NO dark mode, lots of white space, colour client logos shown large, subtle motion only.
+The redfirst.ai reseller offer is branded **Switch On** (stages: Lightbulb session → Switch On → Build Out → Lights On),
+mapped to redfirst's Red Brief / Red Eye / Red Embed. Extra pages: `/lab/`, `/press-kit/`, `/ai-readiness-check/`
+(client-side scorer). Case studies may carry an interactive `blueprint` (lanes × steps). Brand concepts for the Eldingo!
+rename live in `brand/eldingo-logo-concepts.html` (A lightbulb, B bolt, C bell).
 Videos: leadership and About pages accept a `videos` list (YouTube ID or an .mp4 in site/downloads/); press items live in
 `leadership.press`. The Jazz FM / Mishcon interview (May 2025) is audio only, hosted at hellorayo.co.uk; link, don't copy.
 
