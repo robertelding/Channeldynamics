@@ -9,5 +9,9 @@ export async function onRequest(context) {
     url.protocol = 'https:';
     return Response.redirect(url.toString(), 301);
   }
+  // Google Search Console verification: serve the token at the exact URL with a 200 (Pages would otherwise redirect .html URLs)
+  if (url.pathname === '/google094081bd59565cc6.html') {
+    return new Response('google-site-verification: google094081bd59565cc6.html', { headers: { 'content-type': 'text/html; charset=utf-8' } });
+  }
   return context.next();
 }
