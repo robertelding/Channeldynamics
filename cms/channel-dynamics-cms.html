@@ -343,7 +343,8 @@
   },
   {
    "image": "/images/eldingo-client-dwp.svg",
-   "name": "dwp"
+   "name": "dwp",
+   "size": "lg"
   },
   {
    "image": "/images/eldingo-client-lebara.svg",
@@ -359,103 +360,113 @@
   },
   {
    "image": "/images/eldingo-client-moj-v2.svg",
-   "name": "moj"
+   "name": "moj",
+   "size": "lg"
   },
   {
    "name": "Sky",
-   "image": "/images/channel-dynamics-sky.png"
+   "image": "/images/eldingo-client-sky-trim.png"
   },
   {
    "name": "PwC",
-   "image": "/images/channel-dynamics-pwc.png"
+   "image": "/images/eldingo-client-pwc-trim.png"
   },
   {
    "name": "PPA",
-   "image": "/images/channel-dynamics-ppa.png"
+   "image": "/images/eldingo-client-ppa-trim.png"
   },
   {
    "name": "Post Office",
-   "image": "/images/channel-dynamics-post-office.png"
+   "image": "/images/eldingo-client-post-office-trim.png"
   },
   {
    "name": "Penna",
-   "image": "/images/channel-dynamics-penna.png"
+   "image": "/images/eldingo-client-penna-trim.png"
   },
   {
    "name": "Odeon",
-   "image": "/images/channel-dynamics-odeon.png"
+   "image": "/images/eldingo-client-odeon-trim.png"
   },
   {
    "name": "MSD",
-   "image": "/images/channel-dynamics-msd.png"
+   "image": "/images/eldingo-client-msd-trim.png"
   },
   {
    "name": "Metropolitan Police",
-   "image": "/images/channel-dynamics-metpolice.png"
+   "image": "/images/eldingo-client-metpolice-trim.png",
+   "size": "lg"
   },
   {
    "name": "MDU",
-   "image": "/images/channel-dynamics-mdu.png"
+   "image": "/images/eldingo-client-mdu-trim.png"
   },
   {
-   "name": "LG",
-   "image": "/images/channel-dynamics-lg.png"
+   "name": "Legal & General",
+   "image": "/images/eldingo-client-lg-trim.png"
   },
   {
    "name": "Haymarket",
-   "image": "/images/channel-dynamics-haymarket.png"
+   "image": "/images/eldingo-client-haymarket-trim.png",
+   "size": "lg"
   },
   {
    "name": "Freshfields",
-   "image": "/images/channel-dynamics-freshfields.png"
+   "image": "/images/eldingo-client-freshfields-trim.png",
+   "size": "lg"
   },
   {
    "name": "Dow Jones",
-   "image": "/images/channel-dynamics-dowjones.png"
+   "image": "/images/eldingo-client-dowjones-trim.png",
+   "size": "lg"
   },
   {
    "name": "Centaur",
-   "image": "/images/channel-dynamics-centaur.png"
+   "image": "/images/eldingo-client-centaur-trim.png"
   },
   {
    "name": "BSI",
-   "image": "/images/channel-dynamics-bsi.png"
+   "image": "/images/eldingo-client-bsi-trim.png"
   },
   {
    "name": "The Royal British Legion",
-   "image": "/images/channel-dynamics-british-legion.png"
+   "image": "/images/eldingo-client-british-legion-trim.png",
+   "size": "lg"
   },
   {
    "name": "Bird & Bird",
-   "image": "/images/channel-dynamics-birdandbird.png"
+   "image": "/images/eldingo-client-birdandbird-trim.png",
+   "size": "lg"
   },
   {
    "name": "BetVictor",
-   "image": "/images/channel-dynamics-betvictor.png"
+   "image": "/images/eldingo-client-betvictor-trim.png"
   },
   {
    "name": "British Airways",
-   "image": "/images/channel-dynamics-ba.png"
+   "image": "/images/eldingo-client-ba-trim.png",
+   "size": "lg"
   },
   {
    "name": "BBC",
-   "image": "/images/channel-dynamics-bbc.png"
+   "image": "/images/eldingo-client-bbc-trim.png"
   },
   {
    "name": "Amnesty International",
-   "image": "/images/channel-dynamics-amnesty.png"
+   "image": "/images/eldingo-client-amnesty-trim.png"
   },
   {
    "name": "Allianz",
-   "image": "/images/channel-dynamics-allianz.png"
+   "image": "/images/eldingo-client-allianz-trim.png"
   },
   {
    "name": "Sally Salon Services",
-   "image": "/images/channel-dynamics-sally.png"
+   "image": "/images/eldingo-client-sally-trim.png",
+   "size": "lg"
   },
   {
    "name": "The Times",
-   "image": "/images/channel-dynamics-thetimes.png"
+   "image": "/images/eldingo-client-thetimes-trim.png",
+   "size": "lg"
   }
  ],
  "home": {
@@ -4729,9 +4740,11 @@ section{padding:96px 0}
 .bg-ink h2{color:#fff}
 /* logos */
 .logo-wall{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;align-items:center}
-.logo-wall div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;display:grid;place-items:center;height:132px;transition:.2s}
+.logo-wall div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;place-items:center;height:150px;transition:.2s}
 .logo-wall div:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(20,24,29,.08)}
-.logo-wall img{max-height:72px;width:auto;max-width:100%}
+.logo-wall img{max-height:84px;width:auto;max-width:100%;object-fit:contain}
+.logo-wall div.lg img{max-height:106px}
+.logo-wall div.sm img{max-height:60px}
 @media(max-width:900px){.logo-wall{grid-template-columns:repeat(3,1fr)}.logo-wall div{height:110px}}
 @media(max-width:500px){.logo-wall{grid-template-columns:repeat(2,1fr)}}
 .logo-row{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
@@ -5062,7 +5075,7 @@ ${page.body}
   const workCard = (cs) => `<a class="work-card" href="/work/${attr(cs.slug)}/"><img src="${attr(cs.thumb||cs.heroImage)}" alt="${attr(cs.client)}" loading="lazy"><div class="body">${cs.stat?`<div class="stat">${esc(cs.stat)}</div>`:''}<h3>${esc(cs.client)}</h3><p>${esc(cs.stat?cs.statLabel:cs.headline)}</p></div></a>`;
   const workGrid = (list) => `<div class="grid-3">${list.map(workCard).join('')}</div>`;
   const postCard = (p) => `<article class="card"><img src="${attr(p.hero)}" alt="" loading="lazy"><div class="body"><span class="tag">${fmtDate(p.date)}</span><h3>${esc(p.title)}</h3><p>${esc(trunc(p.excerpt||p.body,140))}</p><span class="arrow-link">Read article</span></div><a class="cover" href="/blog/${attr(p.slug)}/" aria-label="${attr(p.title)}"></a></article>`;
-  const logoWall = (list, cls='logo-wall') => `<div class="${cls}">${list.map(l=>`<div><img src="${attr(l.image||l)}" alt="${attr(l.name||'')}" loading="lazy"></div>`).join('')}</div>`;
+  const logoWall = (list, cls='logo-wall') => `<div class="${cls}">${list.map(l=>`<div class="${attr(l.size||'')}"><img src="${attr(l.image||l)}" alt="${attr(l.name||'')}" loading="lazy"></div>`).join('')}</div>`;
   const quoteCard = (t) => `<div class="quote-card"><blockquote>${esc(t.quote)}</blockquote><div class="who">${t.image?`<img src="${attr(t.image)}" alt="${attr(t.name)}" loading="lazy">`:''}<div><b>${esc(t.name)}</b><span>${esc([t.role,t.company].filter(Boolean).join(', '))}</span></div></div></div>`;
   const pullQuote = (q, who) => q ? `<div class="pull-quote"><blockquote>“${esc(q)}”</blockquote>${who?`<cite>— ${esc(who)}</cite>`:''}</div>` : '';
   const crumbs = (items) => `<nav class="breadcrumb" aria-label="Breadcrumb">${items.map((i,n)=> n<items.length-1 ? `<a href="${attr(i.href)}">${esc(i.label)}</a> / ` : `<span>${esc(i.label)}</span>`).join('')}</nav>`;
@@ -5625,7 +5638,7 @@ function renderEditor(){
     html+=fieldHTML({key:'nav',label:'Menu items',type:'list',of:[txt('label','Label'),txt('href','Link'),list('children','Dropdown items',link,'label')],titleKey:'label'},['nav']);
     html+=fieldHTML({key:'navCta',label:'Menu button',type:'object',fields:[txt('label','Label'),txt('href','Link')]},['navCta']);
   } else if(activeSection==='clients'){
-    html+=fieldHTML({key:'clients',label:'Clients',type:'list',of:[txt('name','Name'),img('image','Logo')],titleKey:'name'},['clients']);
+    html+=fieldHTML({key:'clients',label:'Clients',type:'list',of:[txt('name','Name'),img('image','Logo'),txt('size','Size (blank, lg or sm)')],titleKey:'name'},['clients']);
   } else {
     html+=s.fields.map(f=>fieldHTML(f,[activeSection,f.key])).join('');
   }

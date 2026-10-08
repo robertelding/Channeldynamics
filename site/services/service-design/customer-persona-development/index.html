@@ -120,9 +120,11 @@ section{padding:96px 0}
 .bg-ink h2{color:#fff}
 /* logos */
 .logo-wall{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;align-items:center}
-.logo-wall div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;display:grid;place-items:center;height:132px;transition:.2s}
+.logo-wall div{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;place-items:center;height:150px;transition:.2s}
 .logo-wall div:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(20,24,29,.08)}
-.logo-wall img{max-height:72px;width:auto;max-width:100%}
+.logo-wall img{max-height:84px;width:auto;max-width:100%;object-fit:contain}
+.logo-wall div.lg img{max-height:106px}
+.logo-wall div.sm img{max-height:60px}
 @media(max-width:900px){.logo-wall{grid-template-columns:repeat(3,1fr)}.logo-wall div{height:110px}}
 @media(max-width:500px){.logo-wall{grid-template-columns:repeat(2,1fr)}}
 .logo-row{display:flex;flex-wrap:wrap;gap:18px;align-items:center}
@@ -383,7 +385,7 @@ ol.rank{list-style:none;display:grid;gap:14px;margin:0}
 </div></section>
 
 
-<section class="bg-mist"><div class="wrap"><div class="section-head"><h2>Just a few of the clients we have helped with this</h2></div><div class="logo-row"><div><img src="/images/channel-dynamics-bsi-logo.png" alt="" loading="lazy"></div><div><img src="/images/channel-dynamics-cipfa-logo.png" alt="" loading="lazy"></div><div><img src="/images/channel-dynamics-post-office-logo.png" alt="" loading="lazy"></div></div><div class="pull-quote"><blockquote>“The process of working with Channel Dynamics has been an invaluable experience. We moved from idea to user tested interactive prototypes in a couple of weeks. The IT team were able to build the final proposition with the confidence that it would be right for users.”</blockquote><cite>— Head of Marketing and Retail Channels at First Rate</cite></div></div></section>
+<section class="bg-mist"><div class="wrap"><div class="section-head"><h2>Just a few of the clients we have helped with this</h2></div><div class="logo-row"><div class=""><img src="/images/channel-dynamics-bsi-logo.png" alt="" loading="lazy"></div><div class=""><img src="/images/channel-dynamics-cipfa-logo.png" alt="" loading="lazy"></div><div class=""><img src="/images/channel-dynamics-post-office-logo.png" alt="" loading="lazy"></div></div><div class="pull-quote"><blockquote>“The process of working with Channel Dynamics has been an invaluable experience. We moved from idea to user tested interactive prototypes in a couple of weeks. The IT team were able to build the final proposition with the confidence that it would be right for users.”</blockquote><cite>— Head of Marketing and Retail Channels at First Rate</cite></div></div></section>
 <section class="cta-band"><div class="wrap"><div><h2>We will conduct your Customer Persona Development</h2><p>If you would like to book some Customer Persona Development sessions, or if you would like a free consultation about your current project, please get in touch, we’d be delighted to start a conversation.</p></div><a class="btn light" href="/contact/">Book a call</a></div></section>
 </main>
 <script>(function(){var pb=document.querySelector('.progress i');if(pb){var up=function(){var h=document.documentElement;var m=h.scrollHeight-h.clientHeight;pb.style.width=(m>0?Math.min(100,h.scrollTop/m*100):0)+'%'};addEventListener('scroll',up,{passive:true});up()}if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;var els=document.querySelectorAll('main section .wrap > *, main .grid-3 > *, main .grid-4 > *, main .grid-2 > *, main .logo-wall > *, main .steps > *');els.forEach(function(e){e.classList.add('rv')});var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});els.forEach(function(e){io.observe(e)});document.querySelectorAll('.stat b, .work-card .stat').forEach(function(b){var m=b.textContent.match(/^(d+)(%?)$/);if(!m)return;var n=+m[1],t0=null;var o=new IntersectionObserver(function(en){if(!en[0].isIntersecting)return;o.disconnect();function f(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/900);b.textContent=Math.round(n*(1-Math.pow(1-k,3)))+m[2];if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)});o.observe(b)});})();</script>
