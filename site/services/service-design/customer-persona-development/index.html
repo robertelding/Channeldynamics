@@ -202,7 +202,7 @@ section{padding:96px 0}
 .svc-imgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:20px}
 .svc-imgs img{border-radius:12px;border:1px solid var(--line);background:#fff}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;counter-reset:step}
-@media(max-width:900px){.steps{grid-template-columns:1fr}}
+@media(max-width:900px){.steps{grid-template-columns:1fr!important}}
 .step{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;position:relative}
 .step img{height:110px;width:auto;object-fit:contain;margin-bottom:18px}
 .step .num{font-size:12px;font-weight:800;letter-spacing:.16em;color:var(--brand);text-transform:uppercase;margin-bottom:8px}
@@ -288,6 +288,13 @@ details p{padding:0 0 18px;color:var(--slate)}
 /* motion */
 @media(prefers-reduced-motion:no-preference){.rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}.rv.in{opacity:1;transform:none}.rv:nth-child(2){transition-delay:.08s}.rv:nth-child(3){transition-delay:.16s}.rv:nth-child(4){transition-delay:.24s}}
 /* lab + tools */
+.card-stage{background:var(--mist);border-radius:20px;padding:20px}
+.bp-edit details{border:1px solid var(--line);border-radius:12px;padding:0 16px;background:#fff;margin-bottom:10px}
+.bp-edit summary{cursor:pointer;font-weight:700;padding:12px 0}
+.bp-edit label{display:block;font-size:13px;font-weight:700;margin:8px 0}
+.idea-row.pm{grid-template-columns:1.2fr 1fr 1.6fr auto}
+@media print{.site-header,.site-footer,.crumbbar,.form,.cta-band,.prose,.progress,.ticker{display:none!important}.card-stage{padding:0;background:#fff}}
+
 .ticker{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;padding:12px 0}
 .ticker .track{display:flex;gap:48px;white-space:nowrap;animation:tick 40s linear infinite;width:max-content}
 .ticker span{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--brand)}
@@ -374,6 +381,8 @@ ol.rank{list-style:none;display:grid;gap:14px;margin:0}
 
 <div class="svc-sections"><div class="svc-section"><div class="svc-imgs"><img src="/images/channel-dynamics-personas-summary.jpg" alt="Our process for developing User Personas" loading="lazy"></div></div><div class="svc-section"><div><h2>Key benefits of developing User Personas with Eldingo</h2><ul class="check-list cols"><li>Understand and articulate your users’ attitudes, motivations and behaviours</li><li>Present the information to stakeholders in a clear way</li><li>Generate genuine customer insight that can be used by the business</li><li>Ensure that future developments and design decisions are user centred</li><li>Apply learning gained to strengthen the product’s design features to aid conversion, retention, customer engagement and ROI</li><li>Highlight any information gaps about your users that need filling</li><li>Share customer information with other areas of the business in a workshop environment and through the output documentation</li></ul></div></div></div>
 </div></section>
+
+
 <section class="bg-mist"><div class="wrap"><div class="section-head"><h2>Just a few of the clients we have helped with this</h2></div><div class="logo-row"><div><img src="/images/channel-dynamics-bsi-logo.png" alt="" loading="lazy"></div><div><img src="/images/channel-dynamics-cipfa-logo.png" alt="" loading="lazy"></div><div><img src="/images/channel-dynamics-post-office-logo.png" alt="" loading="lazy"></div></div><div class="pull-quote"><blockquote>“The process of working with Channel Dynamics has been an invaluable experience. We moved from idea to user tested interactive prototypes in a couple of weeks. The IT team were able to build the final proposition with the confidence that it would be right for users.”</blockquote><cite>— Head of Marketing and Retail Channels at First Rate</cite></div></div></section>
 <section class="cta-band"><div class="wrap"><div><h2>We will conduct your Customer Persona Development</h2><p>If you would like to book some Customer Persona Development sessions, or if you would like a free consultation about your current project, please get in touch, we’d be delighted to start a conversation.</p></div><a class="btn light" href="/contact/">Book a call</a></div></section>
 </main>
