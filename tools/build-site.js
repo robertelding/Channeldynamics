@@ -27,7 +27,7 @@ if (paths.length < 10) { console.error('Build FAILED: too few pages'); process.e
 function clean(dir) {
   for (const f of fs.readdirSync(dir)) {
     const p = path.join(dir, f);
-    if (['images', 'downloads', 'favicon.png', '_headers', '_redirects', 'robots.txt', '.well-known'].includes(f)) continue;
+    if (['images', 'downloads', 'favicon.png', 'favicon.svg', 'favicon-32.png', 'apple-touch-icon.png', '_headers', '_redirects', 'robots.txt', '.well-known'].includes(f) || /^google[0-9a-f]+\.html$/.test(f)) continue;
     if (fs.statSync(p).isDirectory()) { clean(p); if (fs.readdirSync(p).length === 0) fs.rmdirSync(p); }
     else if (f.endsWith('.html') || f === 'sitemap.xml') fs.unlinkSync(p);
   }
