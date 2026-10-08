@@ -9,6 +9,8 @@
 - Files: `eldingo-logo-{navy,white,red}.svg` (+ `-animated`), `eldingo-mark-{navy,white,red}.svg` (+ `-animated`),
   `eldingo-favicon.svg` / `-navy.svg` and PNGs at 16/32/180/512, `eldingo-logo.json` (path + geometry used by the site renderer).
   Exploration sheets: `eldingo-logo-concepts.html`, `eldingo-font-options*.html`, `eldingo-bulb-variants.html`, `eldingo-navy-large.html`, `eldingo-hanging-bulb.html`.
+- **Brand pack** for designers and printers: `brand/pack/` (vector + hi-res logos, animated SVG/MP4/GIF, favicons, business
+  card print files, guidelines PDF). Rasters and PDFs are made with headless Google Chrome (Quick Look mis-scales wide SVGs).
 - The animation: at rest the halo pulses and the bulb sways ~1.5°; on hover it flickers and swings once. Never a sunburst, never looping flashes.
 
 ## Channel Dynamics (legacy)

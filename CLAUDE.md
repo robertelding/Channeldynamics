@@ -41,7 +41,9 @@ mapped to redfirst's Red Brief / Red Eye / Red Embed. Extra pages: `/lab/` (tool
 IMPORTANT: `site/_headers` caches /images/* for a year as immutable, so NEVER overwrite an image under the same
 name; give changed artwork a new filename (e.g. `eldingo-*`). Client logos: `eldingo-client-*.svg` (bp pulse, Tesco,
 Lloyd's, Lebara, DWP from Wikimedia Commons PD-textlogo; name plates for MoJ, DHSC, HMRC, MHCLG, Shell, WLGA).
-Illustrations: `eldingo-ill-*.svg`, generated in the brand style. Case studies may carry an interactive `blueprint` (lanes × steps). Brand concepts for the Eldingo!
+Illustrations: `eldingo-ill-*.svg`, generated in the brand style. Brand pack (logos, animation, business card, guidelines)
+lives in `brand/pack/`; rasterise SVGs with headless Chrome, never Quick Look. Pitch deck for Switch On is a Claude Slides
+artifact (https://claude.ai/artifact/QxX8WXtt6bKKHEk7VwkivK). Case studies may carry an interactive `blueprint` (lanes × steps). Brand concepts for the Eldingo!
 rename live in `brand/eldingo-logo-concepts.html` (A lightbulb, B bolt, C bell).
 Videos: leadership and About pages accept a `videos` list (YouTube ID or an .mp4 in site/downloads/); press items live in
 `leadership.press`. The Jazz FM / Mishcon interview (May 2025) is audio only, hosted at hellorayo.co.uk; link, don't copy.
