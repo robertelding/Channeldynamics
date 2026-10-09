@@ -1,5 +1,5 @@
 ELDINGO BRAND PACK — October 2026
-Eldingo is a trading name of Channel Dynamics Ltd.
+Eldingo is a trading name of MyStoryboarder Ltd.
 
 logo-svg/        Vector masters: wordmark and bulb mark in navy, white and red
 logo-png/        High-resolution PNG (transparent; white version on navy): 1200 and 4000 px wordmarks, 600 and 2000 px marks

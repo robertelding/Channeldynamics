@@ -1,7 +1,8 @@
 # Eldingo (formerly Channel Dynamics) — project brief for Claude Code
 
-Marketing website for **Eldingo**, the trading name of Channel Dynamics Ltd (company no. 11077677), an AI, service
-design and research consultancy led by Robert Elding. The site showcases past client work (case studies), services,
+Marketing website for **Eldingo**, a trading name of MyStoryboarder Ltd (company number 15259560), an AI, service
+design and research consultancy led by Robert Elding. (The site started life as Channel Dynamics; that name survives
+only in verbatim testimonials and career history.) The site showcases past client work (case studies), services,
 UX training, a blog archive and free resources. It replaces the old WordPress site that lived on WP Engine
 (chndynamics.wpenginepowered.com); copy and images were migrated from there in October 2026.
 
@@ -55,7 +56,7 @@ Videos: leadership and About pages accept a `videos` list (YouTube ID or an .mp4
 
 ## Non-negotiables
 - Never commit secrets or `.env`.
-- Brand is "Eldingo" (legal: Channel Dynamics Ltd). Testimonials and quotes stay verbatim even where they say Channel Dynamics.
+- Brand is "Eldingo" (legal entity: MyStoryboarder Ltd, 15259560). Footer links to porticosuites.com as "Group Accommodation Harrogate". Testimonials and quotes stay verbatim even where they say Channel Dynamics.
 - Testimonials, client names and case-study results are real and must stay verbatim. No invented claims.
 - Images go in `site/images/`, named `channel-dynamics-*.jpg|png|webp`, web-optimised (< ~300 KB).
 - The contact form posts to Web3Forms when `contact.formAccessKey` is set (an access key tied to hello@eldingo.co.uk;
